@@ -2,7 +2,7 @@ Starting My Public Dev Journey — From Central to Solo Dev
 
 My background:
 I've been working in gaming for 7 years with 1 year of game development behind me as an Associate Producer. 
-I started doing solo game dev work off and on until 2026 when I took on Raidbound.
+I started doing solo game dev work off and on and in 2026 I started working on Raidbound.
 
 Why I'm building:
 I really enjoy working on a project and watching the pieces come together. 
