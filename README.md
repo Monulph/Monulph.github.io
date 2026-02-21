@@ -13,4 +13,4 @@ Raidbound is a what I call a Raid Command Roguelite, focused on strategic party 
 
 My goal: My primary goal is to polish Raidbound into a fun, replayable experience that I’m proud of. Once the first two acts are fully realized and engaging, I’ll consider that a major personal milestone. Long-term, I aim to release Raidbound on Steam so others can experience and enjoy the game.
 
-What I’m working on now in no particular order: UI and UX polish across Acts 1 and 2, improving readability and GUI design, fixing bugs introduced during iteration, refining core systems based on playtesting. Each update brings the project closer to a complete, professional-quality experience.
+What I’m working on now in no particular order: UI and UX polish across Acts 1 and 2, improving readability and GUI design, fixing bugs introduced during iteration, refining core systems based on playtesting, and adding audio to the game. Each update brings the project closer to a complete, professional-quality experience.
