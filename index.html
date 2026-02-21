@@ -179,16 +179,16 @@
         data-file="EXACT filename in your repo"
         data-title="caption"
       -->
-      <div class="shot" data-file="Raidbound - Act 1 Boss Fight Victory.png" data-title="Act 1 — Boss Fight Victory"></div>
-      <div class="shot" data-file="Raidbound - Act 1 Normal Fight Victory.png" data-title="Act 1 — Normal Fight Victory"></div>
-      <div class="shot" data-file="Raidbound - Act 1 Map with Elite Node.png" data-title="Act 1 — Map (Elite Node)"></div>
-      <div class="shot" data-file="Raidbound - Act 1 Raid Select.png" data-title="Act 1 — Raid Select"></div>
-      <div class="shot" data-file="Raidbound - Act 2 Introduction.png" data-title="Act 2 — Introduction"></div>
-      <div class="shot" data-file="Raidbound - Act 2 Reinforcements.png" data-title="Act 2 — Reinforcements"></div>
-      <div class="shot" data-file="Raidbound - Hero Collection.png" data-title="Hero Collection"></div>
-      <div class="shot" data-file="Raidbound - Losing Act 2 Boss Fight.png" data-title="Act 2 — Boss Fight (Loss)"></div>
-      <div class="shot" data-file="Raidbound - Won Act 2 Normal Fight.png" data-title="Act 2 — Normal Fight (Win)"></div>
-    </div>
+    <div class="shot" data-path="assets/images/raidbound/Raidbound - Act 1 Boss Fight Victory.png" data-title="Act 1 — Boss Fight Victory"></div>
+    <div class="shot" data-path="assets/images/raidbound/Raidbound - Act 1 Map with Elite Node.png" data-title="Act 1 — Map (Elite Node)"></div>
+    <div class="shot" data-path="assets/images/raidbound/Raidbound - Act 1 Normal Fight Victory.png" data-title="Act 1 — Normal Fight Victory"></div>
+    <div class="shot" data-path="assets/images/raidbound/Raidbound - Act 1 Raid Select.png" data-title="Act 1 — Raid Select"></div>
+    <div class="shot" data-path="assets/images/raidbound/Raidbound - Act 2 Introduction.png" data-title="Act 2 — Introduction"></div>
+    <div class="shot" data-path="assets/images/raidbound/Raidbound - Act 2 Reinforcements.png" data-title="Act 2 — Reinforcements"></div>
+    <div class="shot" data-path="assets/images/raidbound/Raidbound - Hero Collection.png" data-title="Hero Collection"></div>
+    <div class="shot" data-path="assets/images/raidbound/Raidbound - Losing Act 2 Boss Fight.png" data-title="Act 2 — Boss Fight (Loss)"></div>
+    <div class="shot" data-path="assets/images/raidbound/Raidbound - Won Act 2 Normal Fight.png" data-title="Act 2 — Normal Fight (Win)"></div>
+  </div>
 
     <h4 style="margin:26px 0 8px;">Videos (coming next)</h4>
     <p class="muted" style="margin-top:0;">
@@ -225,23 +225,23 @@
 </footer>
 
 <script>
-  // Builds the screenshot tiles from data-file attributes.
-  // Uses the clean repo-relative path:
-  //   assets/images/raidbound/<filename>
-  //
-  // If the image fails to load, it shows a "Missing image" tile that tells you what path it tried.
+  // Build screenshot tiles from data-path attributes.
+  // Key fix: encode spaces and special characters in the URL path.
 
   (function () {
-    const base = "assets/images/raidbound/";
     const tiles = document.querySelectorAll("#raidbound-gallery .shot");
 
+    const encodePath = (path) => {
+      // Encode each path segment, but keep slashes intact.
+      return path.split("/").map(encodeURIComponent).join("/");
+    };
+
     tiles.forEach(tile => {
-      const file = tile.getAttribute("data-file");
-      const title = tile.getAttribute("data-title") || file;
+      const rawPath = tile.getAttribute("data-path");
+      const title = tile.getAttribute("data-title") || rawPath;
 
-      const src = base + file;
+      const src = encodePath(rawPath);
 
-      // Build DOM
       const link = document.createElement("a");
       link.href = src;
       link.target = "_blank";
@@ -254,9 +254,8 @@
       img.loading = "lazy";
       img.src = src;
 
-      // If image fails, replace with a readable missing state
       img.onerror = () => {
-        link.remove(); // remove broken image link
+        link.remove();
         tile.innerHTML = `
           <div class="missing">
             <div>
