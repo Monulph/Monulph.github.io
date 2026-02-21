@@ -9,7 +9,7 @@ I really enjoy working on a project and watching the pieces come together.
 Raidbound has been that outlet and seems to be coming together however complex I am making it.
 
 What Raidbound is:
-Raidbound is a threat-based (Everquest) atb combat system (Chrono Trigger) with deep itemization (Binding of Isaac) and comlex mapping (Slay the Spire) all in one experience.
+Raidbound is a Raid Command Roguelite. It pulls from many genre's including threat-based (Everquest) atb combat system (Chrono Trigger) with deep itemization (Binding of Isaac) and comlex mapping (Slay the Spire) all in one experience.
 
 My goal:
 Right now I am trying to polish Raidbound into a fun experience for myself. Once I have the first 2 acts into an engaging experience with long replayability I will be satisfied.
