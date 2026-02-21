@@ -8,7 +8,7 @@ Why I'm building:
 I really enjoy working on a project and watching the pieces come together. 
 Raidbound has been that able to itch that outlet and the project seems to be coming together. 
 
-What Raidbound is:
+What is Raidbound:
 Raidbound is a Raid Command Roguelite. It pulls from many genre's including threat-based (Everquest) atb combat system (Chrono Trigger) with deep itemization (Binding of Isaac) and comlex mapping (Slay the Spire) all in one experience.
 Though it gets complex sometimes I've managed to get 18,000 lines of code, 14 hero types, 50+ abilities, and 55 items written into the game.
 
