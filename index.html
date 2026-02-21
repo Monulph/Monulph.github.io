@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Monulph | Game Developer</title>
 
   <style>
@@ -16,92 +16,119 @@
 
     header {
       background: #020617;
-      padding: 40px 20px;
+      padding: 44px 20px;
       text-align: center;
+      border-bottom: 1px solid rgba(148,163,184,0.12);
     }
 
     section {
-      max-width: 980px;
+      max-width: 1040px;
       margin: auto;
-      padding: 40px 20px;
+      padding: 34px 20px;
     }
 
     h1, h2 {
       color: #38bdf8;
-      margin-top: 0;
+      margin: 0 0 10px 0;
     }
+
+    h3 { margin: 0 0 10px 0; }
 
     .project {
       background: #020617;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 10px;
+      padding: 22px;
+      margin-bottom: 18px;
+      border-radius: 14px;
       border: 1px solid rgba(148,163,184,0.15);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.25);
     }
 
     a {
       color: #38bdf8;
       text-decoration: none;
     }
+    a:hover { text-decoration: underline; }
 
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .muted {
-      color: #94a3b8;
-    }
+    .muted { color: #94a3b8; }
 
     /* Gallery */
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 14px;
       margin-top: 14px;
     }
 
     .shot {
-      background: #020617;
-      border-radius: 10px;
+      background: rgba(2,6,23,0.9);
+      border-radius: 14px;
       overflow: hidden;
       border: 1px solid rgba(148,163,184,0.15);
+      transition: transform 120ms ease, border-color 120ms ease;
     }
 
-    .shot img {
+    .shot:hover {
+      transform: translateY(-2px);
+      border-color: rgba(56,189,248,0.45);
+    }
+
+    .thumb {
       display: block;
       width: 100%;
-      height: 170px;
+      height: 180px;
       object-fit: cover;
+      background: rgba(15,23,42,0.6);
     }
 
-    .shot .cap {
-      padding: 10px 12px;
+    .cap {
+      padding: 10px 12px 12px;
       font-size: 14px;
       color: #cbd5e1;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: baseline;
     }
 
-    /* Video embed */
-    .video {
-      width: 100%;
-      max-width: 980px;
-      border-radius: 10px;
-      border: 1px solid rgba(148,163,184,0.15);
-      overflow: hidden;
-      background: #020617;
-      margin-top: 14px;
+    .cap small {
+      color: #94a3b8;
+      font-size: 12px;
+      white-space: nowrap;
     }
 
-    .video video {
-      width: 100%;
-      height: auto;
-      display: block;
+    /* Missing tile (when an image path is wrong) */
+    .missing {
+      height: 180px;
+      display: grid;
+      place-items: center;
+      padding: 14px;
+      color: #94a3b8;
+      font-size: 13px;
+      text-align: center;
+      background: repeating-linear-gradient(
+        45deg,
+        rgba(148,163,184,0.08),
+        rgba(148,163,184,0.08) 10px,
+        rgba(148,163,184,0.03) 10px,
+        rgba(148,163,184,0.03) 20px
+      );
     }
+
+    /* Links block */
+    .links p { margin: 8px 0; }
 
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 18px;
       background: #020617;
       color: #94a3b8;
+      border-top: 1px solid rgba(148,163,184,0.12);
+    }
+
+    code {
+      background: rgba(148,163,184,0.12);
+      padding: 2px 6px;
+      border-radius: 6px;
     }
   </style>
 </head>
@@ -111,7 +138,7 @@
 <header>
   <h1>Monulph</h1>
   <p>Solo Indie Game Developer</p>
-  <p>Building Raidbound — A Tactical Roguelite RPG</p>
+  <p class="muted">Building Raidbound — A Tactical Roguelite RPG</p>
 </header>
 
 <section>
@@ -128,76 +155,64 @@
     Once the first two acts are fully realized and engaging, I’ll consider that a major personal milestone.
     Long-term, I aim to release Raidbound on Steam so others can experience and enjoy the game.
   </p>
+</section>
+
+<section>
   <h2>Projects</h2>
 
   <div class="project">
     <h3>Raidbound (Godot 4.6)</h3>
     <p>
-      A tactical roguelite RPG focused on party management, UI clarity,
-      and iterative balance.
+      A tactical roguelite RPG focused on party management, UI clarity, and iterative balance.
     </p>
     <p class="muted">Status: In active development. Public demo in progress.</p>
 
-    <h4 style="margin-bottom:8px;">Screenshots</h4>
+    <h4 style="margin:18px 0 8px;">Screenshots</h4>
+    <p class="muted" style="margin-top:0;">
+      Tip: if a tile says “Missing image”, the filename/path doesn’t match your repo exactly.
+      Your images should live in <code>assets/images/raidbound/</code>.
+    </p>
 
-    <div class="gallery">
-      <!-- Update these filenames to match your moved files -->
-      <div class="shot">
-        <img src="assets/images/raidbound/Raidbound - Act 1 Boss Fight Victory.png" alt="Act 1 Boss Fight Victory">
-        <div class="cap">Act 1 — Boss Fight Victory</div>
-      </div>
-
-      <div class="shot">
-        <img src="assets/images/raidbound/Raidbound - Act 1 Normal Fight Victory.png" alt="Act 1 Normal Fight Victory">
-        <div class="cap">Act 1 — Normal Fight Victory</div>
-      </div>
-
-      <div class="shot">
-        <img src="assets/images/raidbound/Raidbound - Act 1 Map with Elite Node.png" alt="Act 1 Map with Elite Node">
-        <div class="cap">Act 1 — Map (Elite Node)</div>
-      </div>
-
-      <div class="shot">
-        <img src="assets/images/raidbound/Raidbound - Act 2 Reinforcements.png" alt="Act 2 Reinforcements">
-        <div class="cap">Act 2 — Reinforcements</div>
-      </div>
-
-      <div class="shot">
-        <img src="assets/images/raidbound/Raidbound - Hero Collection.png" alt="Hero Collection">
-        <div class="cap">Hero Collection</div>
-      </div>
-
-      <div class="shot">
-        <img src="assets/images/raidbound/Raidbound - Act 2 Introduction.png" alt="Act 2 Introduction">
-        <div class="cap">Act 2 — Introduction</div>
-      </div>
+    <div class="gallery" id="raidbound-gallery">
+      <!--
+        Add screenshots by copying a block and changing:
+        data-file="EXACT filename in your repo"
+        data-title="caption"
+      -->
+      <div class="shot" data-file="Raidbound - Act 1 Boss Fight Victory.png" data-title="Act 1 — Boss Fight Victory"></div>
+      <div class="shot" data-file="Raidbound - Act 1 Normal Fight Victory.png" data-title="Act 1 — Normal Fight Victory"></div>
+      <div class="shot" data-file="Raidbound - Act 1 Map with Elite Node.png" data-title="Act 1 — Map (Elite Node)"></div>
+      <div class="shot" data-file="Raidbound - Act 1 Raid Select.png" data-title="Act 1 — Raid Select"></div>
+      <div class="shot" data-file="Raidbound - Act 2 Introduction.png" data-title="Act 2 — Introduction"></div>
+      <div class="shot" data-file="Raidbound - Act 2 Reinforcements.png" data-title="Act 2 — Reinforcements"></div>
+      <div class="shot" data-file="Raidbound - Hero Collection.png" data-title="Hero Collection"></div>
+      <div class="shot" data-file="Raidbound - Losing Act 2 Boss Fight.png" data-title="Act 2 — Boss Fight (Loss)"></div>
+      <div class="shot" data-file="Raidbound - Won Act 2 Normal Fight.png" data-title="Act 2 — Normal Fight (Win)"></div>
     </div>
 
-    <h4 style="margin-top:26px; margin-bottom:8px;">Videos (coming next)</h4>
+    <h4 style="margin:26px 0 8px;">Videos (coming next)</h4>
     <p class="muted" style="margin-top:0;">
-      We’ll add <code>.mp4</code> embeds here after we organize hosting. (GitHub Pages can work, but bigger files can be annoying.)
+      Next we’ll add a <code>Videos</code> section and decide whether to embed YouTube/Itch or host mp4 directly.
     </p>
   </div>
 
   <div class="project">
     <h3>Python Prototypes</h3>
     <p>
-      Early gameplay and UI experiments used to prototype combat
-      and progression systems.
+      Early gameplay and UI experiments used to prototype combat and progression systems.
     </p>
     <p class="muted">
-      Plan: add a separate page for prototypes, plus either a playable browser version (via Pyodide)
-      or a short demo video + source link.
+      Plan: add a separate page for prototypes. Option A: short videos + source. Option B: playable in-browser prototype (Pyodide).
     </p>
   </div>
-  
+</section>
+
+<section class="links">
   <h2>Links</h2>
 
   <p>
     GitHub:
-    <a href="https://github.com/Monulph" target="_blank" rel="noopener noreferrer">
-      github.com/Monulph
-    </a>
+    <a href="https://github.com/Monulph" target="_blank" rel="noopener noreferrer">github.com/Monulph</a>
   </p>
 
   <p>
@@ -208,6 +223,65 @@
 <footer>
   <p>© 2026 Monulph — Work in Progress</p>
 </footer>
+
+<script>
+  // Builds the screenshot tiles from data-file attributes.
+  // Uses the clean repo-relative path:
+  //   assets/images/raidbound/<filename>
+  //
+  // If the image fails to load, it shows a "Missing image" tile that tells you what path it tried.
+
+  (function () {
+    const base = "assets/images/raidbound/";
+    const tiles = document.querySelectorAll("#raidbound-gallery .shot");
+
+    tiles.forEach(tile => {
+      const file = tile.getAttribute("data-file");
+      const title = tile.getAttribute("data-title") || file;
+
+      const src = base + file;
+
+      // Build DOM
+      const link = document.createElement("a");
+      link.href = src;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.title = "Open full-size";
+
+      const img = document.createElement("img");
+      img.className = "thumb";
+      img.alt = title;
+      img.loading = "lazy";
+      img.src = src;
+
+      // If image fails, replace with a readable missing state
+      img.onerror = () => {
+        link.remove(); // remove broken image link
+        tile.innerHTML = `
+          <div class="missing">
+            <div>
+              <strong>Missing image</strong><br/>
+              Check filename/path:<br/>
+              <code>${src}</code>
+            </div>
+          </div>
+          <div class="cap">
+            <span>${title}</span>
+            <small>not found</small>
+          </div>
+        `;
+      };
+
+      const cap = document.createElement("div");
+      cap.className = "cap";
+      cap.innerHTML = `<span>${title}</span><small>click to open</small>`;
+
+      link.appendChild(img);
+      tile.appendChild(link);
+      tile.appendChild(cap);
+    });
+  })();
+</script>
 
 </body>
 </html>
