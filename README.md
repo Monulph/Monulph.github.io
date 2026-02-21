@@ -1,4 +1,4 @@
-Starting My Public Dev Journey: From Central to Solo Dev
+Starting My Public Dev Journey
 
 My background:
 I've been working in gaming for 7 years with 1 year of game development behind me as an Associate Producer. 
