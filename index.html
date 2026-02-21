@@ -130,35 +130,6 @@
       padding: 2px 6px;
       border-radius: 6px;
     }
-
-    /* === VIDEO STYLES (added) === */
-    .videos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 14px;
-      margin-top: 14px;
-    }
-
-    .videoCard {
-      background: rgba(2,6,23,0.9);
-      border-radius: 14px;
-      overflow: hidden;
-      border: 1px solid rgba(148,163,184,0.15);
-      transition: transform 120ms ease, border-color 120ms ease;
-    }
-
-    .videoCard:hover {
-      transform: translateY(-2px);
-      border-color: rgba(56,189,248,0.45);
-    }
-
-    .videoCard video {
-      width: 100%;
-      height: auto;
-      display: block;
-      background: #000;
-    }
-    /* === /VIDEO STYLES === */
   </style>
 </head>
 
@@ -206,31 +177,18 @@
         data-file="EXACT filename in your repo"
         data-title="caption"
       -->
-      <div class="shot" data-path="assets/images/raidbound/Raidbound - Act 1 Map with Elite Node.png" data-title="Act 1 - Map to Boss"></div>
-      <div class="shot" data-path="assets/images/raidbound/Raidbound - Act 1 Boss Fight Victory.png" data-title="Act 1 - Boss Fight Victory"></div>
-      <div class="shot" data-path="assets/images/raidbound/Raidbound - Act 2 Introduction.png" data-title="Act 2 - Introduction"></div>
-      <div class="shot" data-path="assets/images/raidbound/Raidbound - Act 2 Reinforcements.png" data-title="Act 2 - Reinforcements"></div>
-      <div class="shot" data-path="assets/images/raidbound/Raidbound - Hero Collection.png" data-title="Hero Collection Screen"></div>
-      <div class="shot" data-path="assets/images/raidbound/Raidbound - Item Collection.png" data-title="Item Collection Screen"></div>
-    </div>
+    <div class="shot" data-path="assets/images/raidbound/Raidbound - Act 1 Map with Elite Node.png" data-title="Act 1 - Map to Boss"></div>
+    <div class="shot" data-path="assets/images/raidbound/Raidbound - Act 1 Boss Fight Victory.png" data-title="Act 1 - Boss Fight Victory"></div>
+    <div class="shot" data-path="assets/images/raidbound/Raidbound - Act 2 Introduction.png" data-title="Act 2 - Introduction"></div>
+    <div class="shot" data-path="assets/images/raidbound/Raidbound - Act 2 Reinforcements.png" data-title="Act 2 - Reinforcements"></div>
+    <div class="shot" data-path="assets/images/raidbound/Raidbound - Hero Collection.png" data-title="Hero Collection Screen"></div>
+    <div class="shot" data-path="assets/images/raidbound/Raidbound - Item Collection.png" data-title="Item Collection Screen"></div>
+  </div>
 
-    <h4 style="margin:26px 0 8px;">Videos</h4>
-
-    <!-- === VIDEO SECTION (added) === -->
-    <div class="videos" id="raidbound-videos">
-      <div class="videoCard"
-           data-path="assets/videos/raidbound/Raidbound - Act 1 Boss Demo 480p.mp4"
-           data-title="Act 1 Boss Demo"
-           data-note="480p"></div>
-
-      <!-- Note: filename includes two spaces before 720p per your message -->
-      <div class="videoCard"
-           data-path="assets/videos/raidbound/Raidbound - Normal Combat Demo  720p.mp4"
-           data-title="Normal Combat Demo"
-           data-note="720p"></div>
-    </div>
-    <!-- === /VIDEO SECTION === -->
-
+    <h4 style="margin:26px 0 8px;">Videos (coming next)</h4>
+    <p>
+     
+    </p>
     <h4 style="margin:26px 0 8px;">Python Prototypes (coming after next)</h4>
     <p>
      
@@ -254,12 +212,16 @@
 </footer>
 
 <script>
-  // Shared encoder: encode spaces and special characters in the URL path.
-  const encodePath = (path) => path.split("/").map(encodeURIComponent).join("/");
-
   // Build screenshot tiles from data-path attributes.
+  // Key fix: encode spaces and special characters in the URL path.
+
   (function () {
     const tiles = document.querySelectorAll("#raidbound-gallery .shot");
+
+    const encodePath = (path) => {
+      // Encode each path segment, but keep slashes intact.
+      return path.split("/").map(encodeURIComponent).join("/");
+    };
 
     tiles.forEach(tile => {
       const rawPath = tile.getAttribute("data-path");
@@ -305,53 +267,6 @@
       tile.appendChild(cap);
     });
   })();
-
-  // === VIDEO BUILDER (added) ===
-  (function () {
-    const cards = document.querySelectorAll("#raidbound-videos .videoCard");
-
-    cards.forEach(card => {
-      const rawPath = card.getAttribute("data-path");
-      const title = card.getAttribute("data-title") || rawPath;
-      const note = card.getAttribute("data-note") || "mp4";
-
-      const src = encodePath(rawPath);
-
-      const video = document.createElement("video");
-      video.controls = true;
-      video.preload = "metadata";
-      video.playsInline = true;
-
-      const source = document.createElement("source");
-      source.src = src;
-      source.type = "video/mp4";
-      video.appendChild(source);
-
-      const cap = document.createElement("div");
-      cap.className = "cap";
-      cap.innerHTML = `<span>${title}</span><small>${note}</small>`;
-
-      video.addEventListener("error", () => {
-        card.innerHTML = `
-          <div class="missing" style="height:auto; padding:18px;">
-            <div>
-              <strong>Missing video</strong><br/>
-              Check filename/path:<br/>
-              <code>${src}</code>
-            </div>
-          </div>
-          <div class="cap">
-            <span>${title}</span>
-            <small>not found</small>
-          </div>
-        `;
-      });
-
-      card.appendChild(video);
-      card.appendChild(cap);
-    });
-  })();
-  // === /VIDEO BUILDER ===
 </script>
 
 </body>
