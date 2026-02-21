@@ -2,7 +2,7 @@ Starting My Dev Journey
 
 My background:
 I’ve been working in the gaming industry for 7 years, including 1 year in game development as an Associate Producer.
-After gaining professional experience, I began working on solo game development projects in my free time. In 2026, I committed fully to building my current project, Raidbound.
+After gaining professional experience, I began working on solo game development projects in my free time. In 2026, I committed fully to building my passion project, Raidbound.
 
 Why I’m building:
 I love the process of creating something from the ground up and watching the systems grow into a complete experience.
