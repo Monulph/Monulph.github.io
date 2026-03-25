@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raidbound - Encounter Flow</title>
+  <style>
+    :root {
+      --bg: #020617;
+      --panel: rgba(15, 23, 42, 0.82);
+      --panel-soft: rgba(15, 23, 42, 0.62);
+      --border: rgba(148, 163, 184, 0.15);
+      --text: #e5e7eb;
+      --muted: #cbd5e1;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.18);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: radial-gradient(circle at top, #0f172a 0%, #020617 72%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header, main, footer { width: min(1100px, calc(100% - 32px)); margin: 0 auto; }
+    header { padding: 44px 0 18px; }
+    .eyebrow { color: #7dd3fc; text-transform: uppercase; letter-spacing: 0.08em; font-size: 12px; }
+    h1 { margin: 8px 0 10px; font-size: clamp(30px, 4vw, 44px); }
+    .lede { max-width: 780px; color: var(--muted); }
+    .back-row { margin-top: 18px; }
+    .cta-button {
+      display: inline-block; text-decoration: none; color: #e0f2fe; background: var(--accent-soft);
+      border: 1px solid rgba(125, 211, 252, 0.35); border-radius: 12px; padding: 10px 14px; font-weight: 600;
+    }
+    .panel {
+      background: var(--panel); border: 1px solid var(--border); border-radius: 18px; padding: 22px; margin: 18px 0;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+    .card { background: var(--panel-soft); border: 1px solid var(--border); border-radius: 14px; padding: 16px; }
+    .card h3 { margin: 0 0 8px; font-size: 18px; }
+    .muted { color: var(--muted); }
+    ul { margin: 10px 0 0 18px; padding: 0; }
+    li + li { margin-top: 8px; }
+    footer { padding: 10px 0 40px; color: #94a3b8; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="eyebrow">Raidbound Systems</div>
+    <h1>Encounter Flow</h1>
+    <p class="lede">This page focuses on how Raidbound combat reads from the player side: how a fight starts, where attention is directed, how feedback lands, and why encounters are structured to feel readable instead of chaotic.</p>
+    <div class="back-row"><a class="cta-button" href="index.html">Back to Home</a></div>
+  </header>
+  <main>
+    <section class="panel">
+      <h2>Overview</h2>
+      <p class="muted">Raidbound is built around tactical encounter readability. The goal is not just to show numbers and abilities, but to make it clear when a fight shifts, when pressure rises, and what the player should care about next.</p>
+    </section>
+    <section class="grid">
+      <article class="card"><h3>Pre-Combat Framing</h3><p class="muted">Combat splash screens, enemy count callouts, and encounter type labeling help establish context before the first action is taken.</p></article>
+      <article class="card"><h3>Action Clarity</h3><p class="muted">Hits, healing, floating numbers, shakes, and timing windows all support a combat flow that is easy to follow moment to moment.</p></article>
+      <article class="card"><h3>Threat & Pressure</h3><p class="muted">Threat generation and role responsibilities help the party feel coordinated rather than like isolated units taking turns.</p></article>
+      <article class="card"><h3>Post-Fight Rhythm</h3><p class="muted">Victory overlays, reward pacing, and transitions back to map or progression screens are treated as part of the full combat loop.</p></article>
+    </section>
+    <section class="panel">
+      <h2>Why it matters</h2>
+      <ul>
+        <li>Supports a portfolio story centered on systems ownership and combat presentation.</li>
+        <li>Shows that the project is being shaped through deliberate UX and pacing choices.</li>
+        <li>Helps separate Raidbound from “prototype footage only” by documenting design intent.</li>
+      </ul>
+    </section>
+  </main>
+  <footer>© 2026 Monulph</footer>
+</body>
+</html>
