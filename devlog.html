@@ -32,6 +32,12 @@
       margin-bottom: 6px;
     }
 
+    h3 {
+      color: #cbd5e1;
+      margin: 18px 0 8px;
+      font-size: 16px;
+    }
+
     .entry {
       background: #020617;
       padding: 22px;
@@ -78,52 +84,97 @@
   <!-- New entries go at the TOP -->
 
   <h2>March 2026</h2>
+
   <div class="entry">
-  <div>Website Portfolio Overhaul</div>
+    <div>Raidbound Web Demo Live</div>
 
-  <p>
-    I spent time reorganizing the Monulph.github.io website to better present Raidbound
-    as the primary project and to make the site feel more like a developer portfolio
-    instead of just a project page.
-  </p>
-
-  <p>
-    The Raidbound section now includes system and tool documentation pages so visitors
-    can see how the game is built, not just screenshots and videos.
-  </p>
-
-  <ul>
-    <h3>Website Development</h3>
-    <li>Reorganized the homepage layout</li>
-    <li>Added Raidbound Systems & Tools pages</li>
-    <li>Improved overall site structure and flow</li>
-    <li>Connected portfolio pages directly from the Raidbound section</li>
-    <li>Fractals is now integrated as a visual/technical project</li>
-    <li>Improved the portfolio presentation and project descriptions</li>
-    <h3>Raidbound Development</h3>
-    <li>Built test stem wavs</li>
-    <li>Music stems come and go with combat</li>
-    <li>Combat node rarity affects combat music</li>
-    <li>Item Collection and Hero Collection have music</li>
-    <li>Fixed an error displaying an incorrect amount of mobs incoming to combat</li>
-    <li>Updated floating damage numbers to appear from more than 1 position</li>
-    <li>A window will pop up when you unlock an item</li>
-    <li>Updated some items and their descriptions</li>
-    <li>Added thank you for playing the demo after defeating act 2 boss</li>
-    <li>Changed how music will work through the demo, less ambitious but better presentation</li>
-    <li>Added many SFX</li>
-    <li>Refactored CombatScreen.gd into multiple files</li>
-    <li>Project is now schema first oriented</li>
-    <li>Import/Export works with google sheets for quicker balancing</li>
     <p>
-      Next focus: Finalizing a working demo of Raidbound hosted on Github.
+      I finished a dedicated web demo version of Raidbound and got it hosted through GitHub Pages.
+      Instead of trying to force the full game into a browser build, I created a tighter public-facing slice
+      that loads faster, avoids unfinished systems, and gives players a cleaner first impression.
     </p>
-    
-  </ul>
+
+    <h3>Demo Build Changes</h3>
+    <ul>
+      <li>Removed audio for the web demo and made sure the game remained stable without it</li>
+      <li>Removed the tutorial, profile selection flow, and options menu from the public build</li>
+      <li>Auto-assigned players to Profile 1 to simplify startup</li>
+      <li>Trimmed the hero pool down to Bulwark and Luminary only</li>
+      <li>Locked the available item pool to the first 12 default items only</li>
+      <li>Removed elite nodes, rare nodes, quest item flow, and all of Act 2</li>
+      <li>Shortened Act 1 into a compact 3-row run with 2 normal fights and 1 boss</li>
+      <li>Routed the Act 1 boss victory straight into the existing thank-you-for-playing demo screen</li>
+      <li>Removed boss loot and Act 2 reinforcement flow from the demo path</li>
+    </ul>
+
+    <h3>Web Release Cleanup</h3>
+    <ul>
+      <li>Tracked down missing-art and missing-background issues caused by cutting unused content</li>
+      <li>Cleaned up combat background references so the trimmed project no longer throws missing resource errors</li>
+      <li>Removed item unlock popups since hero and item collection screens are not part of the web demo</li>
+      <li>Added a Play Demo link to the Raidbound section of the portfolio</li>
+      <li>Moved larger site/demo updates into GitHub Desktop so the exported web files could be pushed properly</li>
+    </ul>
+
+    <p>
+      Next focus: Continue polishing the hosted demo experience and keep the portfolio aligned with the current state of Raidbound.
+    </p>
   </div>
+
+  <div class="entry">
+    <div>Website Portfolio Overhaul</div>
+
+    <p>
+      I spent time reorganizing the Monulph.github.io website to better present Raidbound
+      as the primary project and to make the site feel more like a developer portfolio
+      instead of just a project page.
+    </p>
+
+    <p>
+      The Raidbound section now includes system and tool documentation pages so visitors
+      can see how the game is built, not just screenshots and videos.
+    </p>
+
+    <h3>Website Development</h3>
+    <ul>
+      <li>Reorganized the homepage layout</li>
+      <li>Added Raidbound Systems &amp; Tools pages</li>
+      <li>Improved overall site structure and flow</li>
+      <li>Connected portfolio pages directly from the Raidbound section</li>
+      <li>Fractals is now integrated as a visual/technical project</li>
+      <li>Improved the portfolio presentation and project descriptions</li>
+    </ul>
+
+    <h3>Raidbound Development</h3>
+    <ul>
+      <li>Built test stem wavs</li>
+      <li>Music stems come and go with combat</li>
+      <li>Combat node rarity affects combat music</li>
+      <li>Item Collection and Hero Collection have music</li>
+      <li>Fixed an error displaying an incorrect amount of mobs incoming to combat</li>
+      <li>Updated floating damage numbers to appear from more than 1 position</li>
+      <li>A window will pop up when you unlock an item</li>
+      <li>Updated some items and their descriptions</li>
+      <li>Added thank you for playing the demo after defeating act 2 boss</li>
+      <li>Changed how music will work through the demo, less ambitious but better presentation</li>
+      <li>Added many SFX</li>
+      <li>Refactored CombatScreen.gd into multiple files</li>
+      <li>Project is now schema first oriented</li>
+      <li>Import/Export works with google sheets for quicker balancing</li>
+    </ul>
+
+    <p>
+      Next focus: Finalizing a working demo of Raidbound hosted on GitHub.
+    </p>
+  </div>
+
   <h2>February 2026</h2>
   <div class="entry">
     <div>Launching My Public Portfolio</div>
+
+    <p>
+      Raidbound became my primary public development focus in February 2026, after earlier private prototypes and design experiments.
+    </p>
 
     <p>
       This month I finished setting up my public portfolio site and began documenting
@@ -134,13 +185,16 @@
       Key progress:
     </p>
 
+    <h3>Website Development</h3>
     <ul>
-      <h3>Website Development</h3>
       <li>Published Monulph.github.io</li>
       <li>Built a screenshot gallery</li>
       <li>Organized project assets</li>
       <li>Stabilized site structure</li>
-      <h3>Raidbound Development</h3>
+    </ul>
+
+    <h3>Raidbound Development</h3>
+    <ul>
       <li>Removed clutter from combat screen</li>
       <li>Removed un-developed options from options menu</li>
       <li>Increased size of floating damage numbers</li>
