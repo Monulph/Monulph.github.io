@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monulph | Fractals</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #020617;
+      padding: 44px 20px;
+      text-align: center;
+      border-bottom: 1px solid rgba(148,163,184,0.12);
+    }
+
+    section {
+      max-width: 980px;
+      margin: auto;
+      padding: 34px 20px;
+    }
+
+    h1, h2 {
+      color: #38bdf8;
+      margin: 0 0 10px 0;
+    }
+
+    h3 {
+      margin: 0 0 10px 0;
+    }
+
+    .project {
+      background: #020617;
+      padding: 22px;
+      margin-bottom: 18px;
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.15);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+    }
+
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .muted {
+      color: #94a3b8;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 16px;
+      border-radius: 10px;
+      border: 1px solid rgba(56,189,248,0.35);
+      background: rgba(14, 165, 233, 0.12);
+      color: #e5e7eb;
+      font-weight: 600;
+    }
+
+    .cta-button:hover {
+      text-decoration: none;
+      border-color: rgba(56,189,248,0.65);
+      background: rgba(14, 165, 233, 0.18);
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 14px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .pill-list li {
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.18);
+      background: rgba(15,23,42,0.6);
+      color: #cbd5e1;
+      font-size: 13px;
+    }
+
+    .steps {
+      margin: 0;
+      padding-left: 18px;
+      color: #cbd5e1;
+    }
+
+    .steps li {
+      margin: 10px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 18px;
+      background: #020617;
+      color: #94a3b8;
+      border-top: 1px solid rgba(148,163,184,0.12);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Fractals</h1>
+    <p>Responsive visuals for music, interaction, and future game mechanics</p>
+    <p><a href="index.html">← Back to Home</a></p>
+  </header>
+
+  <section>
+    <div class="project">
+      <h2>What it is</h2>
+      <p>
+        Fractals is an interactive visualizer prototype built to explore a bigger idea than audio response alone. The same reactive visual language that makes music feel alive can also support gameplay: combat bursts, boss transitions, menu states, exploration ambience, and player inputs.
+      </p>
+      <p>
+        In other words, this is both a standalone visual experience and a sandbox for future in-game presentation systems.
+      </p>
+      <ul class="pill-list">
+        <li>Audio-reactive scenes</li>
+        <li>System audio and mic input</li>
+        <li>Fullscreen presentation</li>
+        <li>Prototype for game feedback</li>
+      </ul>
+      <div class="button-row">
+        <a class="cta-button" href="fractals/">Launch Fractals</a>
+        <a class="cta-button" href="https://github.com/Monulph/Monulph.github.io" target="_blank" rel="noopener noreferrer">View Site Repo</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <h2>Why it matters for games</h2>
+      <p>
+        I want this project to help answer a useful design question: how can visuals behave like a mechanic instead of a wallpaper? A reactive layer can signal danger, reward precision, amplify atmosphere, or reinforce pacing without needing extra text or UI clutter.
+      </p>
+      <p>
+        That makes Fractals useful as a portfolio piece, but also as R&amp;D for future projects where the screen itself participates in the feel of play.
+      </p>
+    </div>
+
+    <div class="project">
+      <h2>Best way to use it</h2>
+      <ol class="steps">
+        <li>Open the visualizer and interact with the controls first.</li>
+        <li>Start with <strong>Demo Mode</strong> to see the scene system immediately.</li>
+        <li>Use <strong>Mic</strong> for live input, or <strong>System Audio</strong> to react to your computer audio when your browser allows it.</li>
+        <li>Switch to <strong>Fullscreen</strong> for the intended presentation.</li>
+      </ol>
+      <p class="muted">
+        Browser security requires a user interaction before microphone, display capture, and fullscreen behavior can begin. That is expected and built into the launch flow.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Monulph</p>
+  </footer>
+</body>
+</html>
