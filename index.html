@@ -51,7 +51,6 @@
 
     .muted { color: #94a3b8; }
 
-    /* Gallery */
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -96,7 +95,6 @@
       white-space: nowrap;
     }
 
-    /* Missing tile (when an image path is wrong) */
     .missing {
       height: 180px;
       display: grid;
@@ -114,7 +112,6 @@
       );
     }
 
-    /* Links block */
     .links p { margin: 8px 0; }
 
     footer {
@@ -130,7 +127,6 @@
       padding: 2px 6px;
       border-radius: 6px;
     }
-  
 
     .button-row {
       display: flex;
@@ -175,6 +171,37 @@
       font-size: 13px;
     }
 
+    .mini-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .mini-card {
+      background: rgba(15,23,42,0.6);
+      border: 1px solid rgba(148,163,184,0.15);
+      border-radius: 14px;
+      padding: 16px;
+    }
+
+    .mini-card h4 {
+      margin: 0 0 8px 0;
+      color: #e5e7eb;
+    }
+
+    .mini-card p {
+      margin: 0 0 12px 0;
+      color: #cbd5e1;
+      line-height: 1.45;
+      font-size: 14px;
+    }
+
+    .section-intro {
+      color: #cbd5e1;
+      margin: 0 0 14px 0;
+      line-height: 1.55;
+    }
   </style>
 </head>
 
@@ -188,21 +215,20 @@
 
 <section>
 
-   <h2>About Me</h2>
-  
+  <h2>About Me</h2>
+
   <div class="project">
+    <p>
+      I’m a solo developer with 8 years in the gaming industry working in
+      production and player support. I’m now focused on building smooth, player-first
+      game systems through independent projects.
+    </p>
 
-  <p>
-    I’m a solo developer with 8 years in the gaming industry working in
-    production and player support. I’m now focused on building smooth, player-first
-    game systems through independent projects. 
-  </p>
-
-  <p>
-    My primary goal right now is to polish Raidbound into a fun, replayable experience that I’m proud of.
-    Once the first two acts are fully realized and engaging, I’ll consider that a major personal milestone.
-    Long-term, I aim to release Raidbound on Steam so others can experience and enjoy the game. 
-  </p>
+    <p>
+      My primary goal right now is to polish Raidbound into a fun, replayable experience that I’m proud of.
+      Once the first two acts are fully realized and engaging, I’ll consider that a major personal milestone.
+      Long-term, I aim to release Raidbound on Steam so others can experience and enjoy the game.
+    </p>
   </div>
 
   <h2>Projects</h2>
@@ -210,43 +236,76 @@
   <div class="project">
     <h3>Raidbound (Godot 4.6)</h3>
     <p>
-      A tactical roguelite RPG focused on party management, UI clarity, and a unique combat experience. To showcase that combat, Raidbound has hit breaks, floating damage numbers, glowing ATB gauges, attacking & healing with threat generation, and dozens of hero/enemy abilties with buffs/debuffs.
+      A tactical roguelite RPG focused on party management, UI clarity, and a unique combat experience. To showcase that combat, Raidbound has hit breaks, floating damage numbers, glowing ATB gauges, attacking &amp; healing with threat generation, and dozens of hero/enemy abilities with buffs/debuffs.
     </p>
     <p class="muted">Status: In active development. Public demo in progress.</p>
 
     <h4 style="margin:18px 0 8px;">Screenshots</h4>
 
     <div class="gallery" id="raidbound-gallery">
-      <!--
-        Add screenshots by copying a block and changing:
-        data-file="EXACT filename in your repo"
-        data-title="caption"
-      -->
-    <div class="shot" data-path="assets/images/raidbound/Raidbound - Act 1 Map with Elite Node.png" data-title="Act 1 - Map to Boss"></div>
-    <div class="shot" data-path="assets/images/raidbound/Raidbound - Act 1 Boss Fight Victory.png" data-title="Act 1 - Boss Fight Victory"></div>
-    <div class="shot" data-path="assets/images/raidbound/Raidbound - Act 2 Introduction.png" data-title="Act 2 - Introduction"></div>
-    <div class="shot" data-path="assets/images/raidbound/Raidbound - Act 2 Reinforcements.png" data-title="Act 2 - Reinforcements"></div>
-    <div class="shot" data-path="assets/images/raidbound/Raidbound - Hero Collection.png" data-title="Hero Collection Screen"></div>
-    <div class="shot" data-path="assets/images/raidbound/Raidbound - Item Collection.png" data-title="Item Collection Screen"></div>
-  </div>
+      <div class="shot" data-path="assets/images/raidbound/Raidbound - Act 1 Map with Elite Node.png" data-title="Act 1 - Map to Boss"></div>
+      <div class="shot" data-path="assets/images/raidbound/Raidbound - Act 1 Boss Fight Victory.png" data-title="Act 1 - Boss Fight Victory"></div>
+      <div class="shot" data-path="assets/images/raidbound/Raidbound - Act 2 Introduction.png" data-title="Act 2 - Introduction"></div>
+      <div class="shot" data-path="assets/images/raidbound/Raidbound - Act 2 Reinforcements.png" data-title="Act 2 - Reinforcements"></div>
+      <div class="shot" data-path="assets/images/raidbound/Raidbound - Hero Collection.png" data-title="Hero Collection Screen"></div>
+      <div class="shot" data-path="assets/images/raidbound/Raidbound - Item Collection.png" data-title="Item Collection Screen"></div>
+    </div>
 
     <h4 style="margin:26px 0 8px;">Videos</h4>
-<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:14px;border:1px solid rgba(148,163,184,0.15);background:#020617;">
-  <iframe
-    src="https://www.youtube.com/embed/bHj0cY61R0I"
-    title="Raidbound Video"
-    style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen>
-  </iframe>
-</div>
-</div>
-    <p>
-     
-    </p>
+    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:14px;border:1px solid rgba(148,163,184,0.15);background:#020617;">
+      <iframe
+        src="https://www.youtube.com/embed/bHj0cY61R0I"
+        title="Raidbound Video"
+        style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
   </div>
 
+  <h2>Raidbound Systems &amp; Tools</h2>
+  <p class="section-intro">
+    These pages break Raidbound down into the systems, tools, and design decisions behind the project.
+    They are meant to show not just what the game looks like, but how it is being built.
+  </p>
 
+  <div class="mini-grid">
+    <div class="mini-card">
+      <h4>Combat System</h4>
+      <p>How actions, feedback, threat, and encounter flow come together inside Raidbound combat.</p>
+      <a class="cta-button" href="raidbound-combat-system.html">Open Page</a>
+    </div>
+
+    <div class="mini-card">
+      <h4>ATB System</h4>
+      <p>A closer look at the deterministic ATB structure, charge economy, and combat pacing goals.</p>
+      <a class="cta-button" href="raidbound-atb-system.html">Open Page</a>
+    </div>
+
+    <div class="mini-card">
+      <h4>Items &amp; Unlocks</h4>
+      <p>Role-aware itemization, unlock logic, progression hooks, and collection screen organization.</p>
+      <a class="cta-button" href="raidbound-items-unlocks.html">Open Page</a>
+    </div>
+
+    <div class="mini-card">
+      <h4>UI Systems</h4>
+      <p>Card layouts, bordered panels, collection screens, readability, and combat information hierarchy.</p>
+      <a class="cta-button" href="raidbound-ui-systems.html">Open Page</a>
+    </div>
+
+    <div class="mini-card">
+      <h4>Tools &amp; Pipeline</h4>
+      <p>Spreadsheet-driven workflows, patching, data organization, and development tooling used on the project.</p>
+      <a class="cta-button" href="raidbound-tools-pipeline.html">Open Page</a>
+    </div>
+
+    <div class="mini-card">
+      <h4>Combat Simulator</h4>
+      <p>The standalone simulation direction used to validate combat balance and support future tuning workflows.</p>
+      <a class="cta-button" href="raidbound-combat-simulator.html">Open Page</a>
+    </div>
+  </div>
 
   <div class="project">
     <h3>Fractals (Interactive Visualizer Prototype)</h3>
@@ -271,16 +330,14 @@
     </div>
   </div>
 
-    <h2>Devlog</h2>
-  
+  <h2>Devlog</h2>
+
   <div class="project">
-
-  <p>
-    <a href="devlog.html">Read development updates</a>
-  </p>
-
+    <p>
+      <a href="devlog.html">Read development updates</a>
+    </p>
   </div>
-  
+
   <h2>Links</h2>
 
   <p>
@@ -292,20 +349,16 @@
     Email: <a href="mailto:schimmelsgames@gmail.com">schimmelsgames@gmail.com</a>
   </p>
 </section>
-  
+
 <footer>
   <p>© 2026 Monulph</p>
 </footer>
 
 <script>
-  // Build screenshot tiles from data-path attributes.
-  // Key fix: encode spaces and special characters in the URL path.
-
   (function () {
     const tiles = document.querySelectorAll("#raidbound-gallery .shot");
 
     const encodePath = (path) => {
-      // Encode each path segment, but keep slashes intact.
       return path.split("/").map(encodeURIComponent).join("/");
     };
 
