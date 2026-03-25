@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raidbound | ATB System</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #0f172a; color: #e5e7eb; margin: 0; padding: 0; }
+    header { background: #020617; padding: 44px 20px; text-align: center; border-bottom: 1px solid rgba(148,163,184,0.12); }
+    section { max-width: 1040px; margin: auto; padding: 34px 20px; }
+    h1, h2 { color: #38bdf8; margin: 0 0 10px 0; }
+    h3 { margin: 0 0 10px 0; }
+    a { color: #38bdf8; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .muted { color: #94a3b8; }
+    .project { background: #020617; padding: 22px; margin-bottom: 18px; border-radius: 14px; border: 1px solid rgba(148,163,184,0.15); box-shadow: 0 8px 18px rgba(0,0,0,0.25); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 14px; }
+    .card { background: rgba(15,23,42,0.55); border: 1px solid rgba(148,163,184,0.14); border-radius: 12px; padding: 16px; }
+    .pill-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 0; padding: 0; list-style: none; }
+    .pill-list li { padding: 6px 10px; border-radius: 999px; border: 1px solid rgba(148,163,184,0.18); background: rgba(15,23,42,0.6); color: #cbd5e1; font-size: 13px; }
+    .button-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+    .cta-button { display: inline-flex; align-items: center; justify-content: center; padding: 10px 14px; border-radius: 10px; border: 1px solid rgba(56,189,248,0.35); background: rgba(14,165,233,0.12); color: #e5e7eb; font-weight: 600; }
+    .cta-button:hover { text-decoration: none; border-color: rgba(56,189,248,0.65); background: rgba(14,165,233,0.18); }
+    .step { margin-top: 14px; padding: 14px 16px; border-radius: 12px; background: rgba(56,189,248,0.06); border: 1px solid rgba(56,189,248,0.15); }
+    footer { text-align: center; padding: 18px; background: #020617; color: #94a3b8; border-top: 1px solid rgba(148,163,184,0.12); }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Raidbound ATB System</h1>
+  <p>Charge-based pacing designed to keep menu combat active and readable</p>
+  <p class="muted">A timing layer built for clarity, not chaos</p>
+</header>
+<section>
+  <div class="project">
+    <p><a href="index.html">← Back to Home</a></p>
+    <p>
+      Raidbound uses an Active Time Battle structure to keep fights moving while preserving tactical control. Instead of long static turns, the player responds as heroes reach readiness. That creates urgency, but the interface still keeps decisions understandable.
+    </p>
+    <ul class="pill-list">
+      <li>Charge-based readiness</li>
+      <li>No spell queue clutter</li>
+      <li>Hero-by-hero decisions</li>
+      <li>Visual readiness feedback</li>
+    </ul>
+  </div>
+
+  <h2>Design Problem</h2>
+  <div class="project">
+    <p>
+      A lot of fast combat systems become hard to read once several characters, effects, and abilities are moving at once. I wanted Raidbound to feel active, but I did not want the player wrestling with a timeline they could barely parse.
+    </p>
+    <p>
+      The answer was a controlled ATB layer: enough motion to keep battles alive, but enough structure that action availability, role identity, and effect timing can still be understood quickly.
+    </p>
+  </div>
+
+  <h2>How It Works</h2>
+  <div class="grid">
+    <div class="card"><h3>Build charge</h3><p>Heroes accumulate toward an action threshold over time, creating a steady rhythm of readiness instead of all-or-nothing turns.</p></div>
+    <div class="card"><h3>Reach full state</h3><p>When a hero is ready, the UI presents available actions clearly. Full readiness is emphasized visually so the player can spot it instantly.</p></div>
+    <div class="card"><h3>Spend through actions</h3><p>Attacks and abilities consume readiness according to their design, allowing pacing differences between simple actions and stronger options.</p></div>
+    <div class="card"><h3>Return to flow</h3><p>Once resolved, the hero re-enters the shared pace of battle and starts building toward the next decision point.</p></div>
+  </div>
+
+  <h2>Why It Fits Raidbound</h2>
+  <div class="project">
+    <div class="step"><strong>It supports party play.</strong> Multiple heroes can come online at different times, which makes role coverage and party planning more important.</div>
+    <div class="step"><strong>It rewards UI clarity.</strong> Gauge glow, card state, and action visibility become meaningful parts of gameplay communication.</div>
+    <div class="step"><strong>It scales well with systems.</strong> Items, buffs, debuffs, and encounter types can influence battle pacing without requiring a completely different combat framework.</div>
+  </div>
+
+  <h2>Technical Value</h2>
+  <div class="grid">
+    <div class="card"><h3>Balance friendly</h3><p>A deterministic timing model is easier to simulate, test, and tune than loosely defined action chaos.</p></div>
+    <div class="card"><h3>Portfolio signal</h3><p>This system shows combat pacing design, UI communication, and technical thinking all in one feature.</p></div>
+    <div class="card"><h3>Future tooling</h3><p>The ATB layer is a strong candidate for simulators, visualizers, and spreadsheet-backed balance workflows.</p></div>
+  </div>
+
+  <div class="project">
+    <h2>Explore More</h2>
+    <div class="button-row">
+      <a class="cta-button" href="raidbound-combat-system.html">Combat System</a>
+      <a class="cta-button" href="raidbound-combat-simulator.html">Combat Simulator</a>
+      <a class="cta-button" href="raidbound-tools-pipeline.html">Tools Pipeline</a>
+    </div>
+  </div>
+</section>
+<footer><p>© 2026 Monulph</p></footer>
+</body>
+</html>

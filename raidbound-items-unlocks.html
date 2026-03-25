@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raidbound | Items & Unlocks</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #0f172a; color: #e5e7eb; margin: 0; padding: 0; }
+    header { background: #020617; padding: 44px 20px; text-align: center; border-bottom: 1px solid rgba(148,163,184,0.12); }
+    section { max-width: 1040px; margin: auto; padding: 34px 20px; }
+    h1, h2 { color: #38bdf8; margin: 0 0 10px 0; }
+    h3 { margin: 0 0 10px 0; }
+    a { color: #38bdf8; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .project { background: #020617; padding: 22px; margin-bottom: 18px; border-radius: 14px; border: 1px solid rgba(148,163,184,0.15); box-shadow: 0 8px 18px rgba(0,0,0,0.25); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 14px; }
+    .card { background: rgba(15,23,42,0.55); border: 1px solid rgba(148,163,184,0.14); border-radius: 12px; padding: 16px; }
+    .button-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+    .cta-button { display: inline-flex; align-items: center; justify-content: center; padding: 10px 14px; border-radius: 10px; border: 1px solid rgba(56,189,248,0.35); background: rgba(14,165,233,0.12); color: #e5e7eb; font-weight: 600; }
+    .cta-button:hover { text-decoration: none; border-color: rgba(56,189,248,0.65); background: rgba(14,165,233,0.18); }
+    .muted { color: #94a3b8; }
+    .pill-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 0; padding: 0; list-style: none; }
+    .pill-list li { padding: 6px 10px; border-radius: 999px; border: 1px solid rgba(148,163,184,0.18); background: rgba(15,23,42,0.6); color: #cbd5e1; font-size: 13px; }
+    footer { text-align: center; padding: 18px; background: #020617; color: #94a3b8; border-top: 1px solid rgba(148,163,184,0.12); }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Raidbound Items & Unlocks</h1>
+  <p>Run-shaping rewards and progression rules designed to encourage experimentation</p>
+  <p class="muted">A roguelite layer built around discovery, role support, and replay value</p>
+</header>
+<section>
+  <div class="project">
+    <p><a href="index.html">← Back to Home</a></p>
+    <p>
+      Raidbound's item and unlock systems exist to make repeated runs feel rewarding. Items help define a run in the moment, while unlocks give the player long-term goals and reasons to keep pushing through different encounter types.
+    </p>
+    <ul class="pill-list">
+      <li>Run-defining items</li>
+      <li>Role-aware rewards</li>
+      <li>Profile-based progression</li>
+      <li>Boss and encounter unlock hooks</li>
+    </ul>
+  </div>
+
+  <h2>Items During a Run</h2>
+  <div class="grid">
+    <div class="card"><h3>Meaningful choices</h3><p>Reward screens aim to present choices that matter to party composition and current strategy instead of filler loot.</p></div>
+    <div class="card"><h3>Role-aware logic</h3><p>Items can support tanks, healers, ranged damage, or melee damage so rewards feel aligned with party identity.</p></div>
+    <div class="card"><h3>Cross-act continuity</h3><p>Run items persist across the flow of the run, helping later encounters reflect earlier choices instead of resetting the player's progress.</p></div>
+  </div>
+
+  <h2>Long-Term Unlock Structure</h2>
+  <div class="project">
+    <p>
+      Unlocks are inspired by games that make repeated attempts feel additive. Beating bosses, clearing encounter types, and interacting with different enemy categories can open new rewards and progression paths. That lets the player feel momentum even while runs themselves remain risky.
+    </p>
+    <div class="grid">
+      <div class="card"><h3>Boss-driven unlocks</h3><p>Major milestones can unlock new content after first clears or repeated victories.</p></div>
+      <div class="card"><h3>Encounter-driven unlocks</h3><p>Elite, rare, faction, or enemy-type hooks allow content to open through broader play patterns.</p></div>
+      <div class="card"><h3>Per-profile persistence</h3><p>Progression is saved by profile so the player can maintain distinct save identities instead of one shared global state.</p></div>
+    </div>
+  </div>
+
+  <h2>Why This Matters</h2>
+  <div class="grid">
+    <div class="card"><h3>Replayability</h3><p>Even short sessions can reveal something new, making it easier for players to stay engaged while the game grows.</p></div>
+    <div class="card"><h3>Stronger build expression</h3><p>Items are not just stat bumps. They help shape how a party solves problems and what kinds of combat patterns become appealing.</p></div>
+    <div class="card"><h3>Good portfolio signal</h3><p>This system demonstrates progression design, reward design, persistence logic, and cross-system communication.</p></div>
+  </div>
+
+  <div class="project">
+    <h2>Related Pages</h2>
+    <div class="button-row">
+      <a class="cta-button" href="raidbound-combat-system.html">Combat System</a>
+      <a class="cta-button" href="raidbound-ui-systems.html">UI Systems</a>
+      <a class="cta-button" href="raidbound-tools-pipeline.html">Tools Pipeline</a>
+    </div>
+  </div>
+</section>
+<footer><p>© 2026 Monulph</p></footer>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raidbound | Tools & Pipeline</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #0f172a; color: #e5e7eb; margin: 0; padding: 0; }
+    header { background: #020617; padding: 44px 20px; text-align: center; border-bottom: 1px solid rgba(148,163,184,0.12); }
+    section { max-width: 1040px; margin: auto; padding: 34px 20px; }
+    h1, h2 { color: #38bdf8; margin: 0 0 10px 0; }
+    h3 { margin: 0 0 10px 0; }
+    a { color: #38bdf8; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .project { background: #020617; padding: 22px; margin-bottom: 18px; border-radius: 14px; border: 1px solid rgba(148,163,184,0.15); box-shadow: 0 8px 18px rgba(0,0,0,0.25); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 14px; }
+    .card { background: rgba(15,23,42,0.55); border: 1px solid rgba(148,163,184,0.14); border-radius: 12px; padding: 16px; }
+    .button-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+    .cta-button { display: inline-flex; align-items: center; justify-content: center; padding: 10px 14px; border-radius: 10px; border: 1px solid rgba(56,189,248,0.35); background: rgba(14,165,233,0.12); color: #e5e7eb; font-weight: 600; }
+    .cta-button:hover { text-decoration: none; border-color: rgba(56,189,248,0.65); background: rgba(14,165,233,0.18); }
+    .muted { color: #94a3b8; }
+    code { background: rgba(148,163,184,0.12); padding: 2px 6px; border-radius: 6px; }
+    footer { text-align: center; padding: 18px; background: #020617; color: #94a3b8; border-top: 1px solid rgba(148,163,184,0.12); }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Raidbound Tools & Pipeline</h1>
+  <p>Workflow improvements built to reduce friction and make iteration faster</p>
+  <p class="muted">The project is not only the game. It is also the tooling around the game.</p>
+</header>
+<section>
+  <div class="project">
+    <p><a href="index.html">← Back to Home</a></p>
+    <p>
+      One of the most important lessons from developing Raidbound has been that project quality is heavily shaped by workflow quality. The more repeatable the pipeline is, the easier it becomes to balance combat, refactor systems, and avoid carrying legacy behavior forward.
+    </p>
+  </div>
+
+  <h2>Pipeline Goals</h2>
+  <div class="grid">
+    <div class="card"><h3>Faster iteration</h3><p>Balance and content changes should be easy to make without digging through scattered scripts or hardcoded values.</p></div>
+    <div class="card"><h3>Cleaner structure</h3><p>Tools should support schema-first organization so naming and behavior stay consistent as the project expands.</p></div>
+    <div class="card"><h3>Safer refactors</h3><p>Better data flow and export/import patterns reduce the chance that a systems change quietly breaks content.</p></div>
+  </div>
+
+  <h2>Examples of Tooling Work</h2>
+  <div class="grid">
+    <div class="card"><h3>Spreadsheet-backed balance flow</h3><p>Gameplay values can move through a more structured data workflow instead of living only inside hand-edited scripts.</p></div>
+    <div class="card"><h3>Import / export support</h3><p>Tooling work makes it easier to push balance data out for review and bring validated changes back into the project.</p></div>
+    <div class="card"><h3>Patch-minded workflow</h3><p>A cleaner patch process helps keep changes targeted, easier to review, and safer to apply while the project is evolving quickly.</p></div>
+    <div class="card"><h3>Combat simulation support</h3><p>The more deterministic the rules become, the stronger the case for standalone tools that can test and visualize game behavior.</p></div>
+  </div>
+
+  <h2>Why This Belongs in the Portfolio</h2>
+  <div class="project">
+    <p>
+      Tools and workflow pages communicate something screenshots cannot: how I think about maintainability. They show that I care about more than shipping visible features. I also care about making the project easier to understand, tune, and extend over time.
+    </p>
+    <p>
+      That is useful for solo development, but it is also directly relevant to gameplay programming, technical design, tools work, and production-facing engineering roles.
+    </p>
+  </div>
+
+  <div class="project">
+    <h2>Example Areas to Expand Later</h2>
+    <p class="muted">These are great places to add screenshots, short gifs, or code snippets later:</p>
+    <ul>
+      <li>Spreadsheet import/export workflow</li>
+      <li>Schema-first data organization</li>
+      <li>Patch generation and application flow</li>
+      <li>Testing or validation helpers</li>
+      <li>Balance workbook examples</li>
+    </ul>
+  </div>
+
+  <div class="project">
+    <h2>Explore More</h2>
+    <div class="button-row">
+      <a class="cta-button" href="raidbound-combat-simulator.html">Combat Simulator</a>
+      <a class="cta-button" href="raidbound-atb-system.html">ATB System</a>
+      <a class="cta-button" href="raidbound-combat-system.html">Combat System</a>
+    </div>
+  </div>
+</section>
+<footer><p>© 2026 Monulph</p></footer>
+</body>
+</html>

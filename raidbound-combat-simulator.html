@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raidbound | Combat Simulator</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #0f172a; color: #e5e7eb; margin: 0; padding: 0; }
+    header { background: #020617; padding: 44px 20px; text-align: center; border-bottom: 1px solid rgba(148,163,184,0.12); }
+    section { max-width: 1040px; margin: auto; padding: 34px 20px; }
+    h1, h2 { color: #38bdf8; margin: 0 0 10px 0; }
+    h3 { margin: 0 0 10px 0; }
+    a { color: #38bdf8; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .project { background: #020617; padding: 22px; margin-bottom: 18px; border-radius: 14px; border: 1px solid rgba(148,163,184,0.15); box-shadow: 0 8px 18px rgba(0,0,0,0.25); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 14px; }
+    .card { background: rgba(15,23,42,0.55); border: 1px solid rgba(148,163,184,0.14); border-radius: 12px; padding: 16px; }
+    .muted { color: #94a3b8; }
+    .button-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+    .cta-button { display: inline-flex; align-items: center; justify-content: center; padding: 10px 14px; border-radius: 10px; border: 1px solid rgba(56,189,248,0.35); background: rgba(14,165,233,0.12); color: #e5e7eb; font-weight: 600; }
+    .cta-button:hover { text-decoration: none; border-color: rgba(56,189,248,0.65); background: rgba(14,165,233,0.18); }
+    footer { text-align: center; padding: 18px; background: #020617; color: #94a3b8; border-top: 1px solid rgba(148,163,184,0.12); }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Raidbound Combat Simulator</h1>
+  <p>A future-facing tool for validating combat logic, balance, and pacing outside the live game</p>
+  <p class="muted">Simulation is a natural extension of a deterministic combat system</p>
+</header>
+<section>
+  <div class="project">
+    <p><a href="index.html">← Back to Home</a></p>
+    <p>
+      As Raidbound's systems become cleaner and more data-driven, a standalone combat simulator becomes increasingly valuable. It offers a way to inspect encounters, compare outcomes, and test balance assumptions without always requiring full manual playthroughs inside the game client.
+    </p>
+  </div>
+
+  <h2>Why Build a Simulator</h2>
+  <div class="grid">
+    <div class="card"><h3>Faster balance testing</h3><p>When many heroes, abilities, and enemies interact, simulation helps identify rough spots before they become long debugging sessions.</p></div>
+    <div class="card"><h3>System confidence</h3><p>A simulator can help validate that shared rules and data structures are behaving the way the live game expects.</p></div>
+    <div class="card"><h3>Better design visibility</h3><p>Simulation turns abstract balance discussions into inspectable runs, logs, and repeatable comparisons.</p></div>
+  </div>
+
+  <h2>What It Could Support</h2>
+  <div class="project">
+    <div class="grid">
+      <div class="card"><h3>Encounter testing</h3><p>Run a party against a target encounter repeatedly to spot pacing spikes, survivability issues, or role gaps.</p></div>
+      <div class="card"><h3>Ability validation</h3><p>Confirm that buffs, debuffs, threat behavior, and damage rules resolve correctly in a controlled environment.</p></div>
+      <div class="card"><h3>Spreadsheet-fed analysis</h3><p>Use exported balance data as an input source so content changes can be evaluated more systematically.</p></div>
+      <div class="card"><h3>Future visualizers</h3><p>ATB timeline displays, damage breakdowns, and outcome summaries can all grow naturally from simulation work.</p></div>
+    </div>
+  </div>
+
+  <h2>Why This Is a Strong Portfolio Piece</h2>
+  <div class="project">
+    <p>
+      A combat simulator showcases more than one skill at once. It communicates systems design, data modeling, tooling instincts, and a willingness to invest in better iteration infrastructure. It is the kind of project that helps explain not just what the game is, but how I work on the game.
+    </p>
+  </div>
+
+  <div class="project">
+    <h2>Explore More</h2>
+    <div class="button-row">
+      <a class="cta-button" href="raidbound-tools-pipeline.html">Tools Pipeline</a>
+      <a class="cta-button" href="raidbound-atb-system.html">ATB System</a>
+      <a class="cta-button" href="raidbound-combat-system.html">Combat System</a>
+    </div>
+  </div>
+</section>
+<footer><p>© 2026 Monulph</p></footer>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raidbound | UI Systems</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #0f172a; color: #e5e7eb; margin: 0; padding: 0; }
+    header { background: #020617; padding: 44px 20px; text-align: center; border-bottom: 1px solid rgba(148,163,184,0.12); }
+    section { max-width: 1040px; margin: auto; padding: 34px 20px; }
+    h1, h2 { color: #38bdf8; margin: 0 0 10px 0; }
+    h3 { margin: 0 0 10px 0; }
+    a { color: #38bdf8; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .project { background: #020617; padding: 22px; margin-bottom: 18px; border-radius: 14px; border: 1px solid rgba(148,163,184,0.15); box-shadow: 0 8px 18px rgba(0,0,0,0.25); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 14px; }
+    .card { background: rgba(15,23,42,0.55); border: 1px solid rgba(148,163,184,0.14); border-radius: 12px; padding: 16px; }
+    .muted { color: #94a3b8; }
+    .button-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+    .cta-button { display: inline-flex; align-items: center; justify-content: center; padding: 10px 14px; border-radius: 10px; border: 1px solid rgba(56,189,248,0.35); background: rgba(14,165,233,0.12); color: #e5e7eb; font-weight: 600; }
+    .cta-button:hover { text-decoration: none; border-color: rgba(56,189,248,0.65); background: rgba(14,165,233,0.18); }
+    footer { text-align: center; padding: 18px; background: #020617; color: #94a3b8; border-top: 1px solid rgba(148,163,184,0.12); }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Raidbound UI Systems</h1>
+  <p>Interface work focused on readability, atmosphere, and player trust</p>
+  <p class="muted">UI is part of the gameplay experience, not a layer placed on top of it</p>
+</header>
+<section>
+  <div class="project">
+    <p><a href="index.html">← Back to Home</a></p>
+    <p>
+      Raidbound is a UI-heavy game. Because the player is reading enemy states, hero readiness, loot, map progression, and collection screens constantly, interface quality directly affects whether the game feels strategic or overwhelming.
+    </p>
+  </div>
+
+  <h2>UI Priorities</h2>
+  <div class="grid">
+    <div class="card"><h3>Readability first</h3><p>Critical information should be easy to parse under pressure. That includes combat readiness, reward choices, and party information.</p></div>
+    <div class="card"><h3>Consistent framing</h3><p>Panels, borders, spacing, and button treatment should feel like part of one visual language across menus, overlays, and reward screens.</p></div>
+    <div class="card"><h3>Dark-fantasy presentation</h3><p>The game aims for a moody, painterly identity while still keeping contrast high enough that interaction remains comfortable.</p></div>
+  </div>
+
+  <h2>Screens I Focus On Most</h2>
+  <div class="grid">
+    <div class="card"><h3>Combat cards</h3><p>Enemy and hero cards must communicate state, portrait identity, timing, and impact feedback without feeling noisy.</p></div>
+    <div class="card"><h3>Map flow</h3><p>The map should feel cinematic while still supporting player navigation, node understanding, and run pacing.</p></div>
+    <div class="card"><h3>Reward screens</h3><p>Loot and collection screens need enough structure that the player can compare options quickly and feel rewarded, not interrupted.</p></div>
+    <div class="card"><h3>Collections and options</h3><p>Longer-term utility screens need to stay clean even as the project gains more heroes, items, and settings.</p></div>
+  </div>
+
+  <h2>Why This Page Matters in My Portfolio</h2>
+  <div class="project">
+    <p>
+      A lot of portfolio work shows art or code in isolation. UI systems show how those pieces meet. This page reflects the kind of work that sits between design, implementation, playtesting, and polish: layout decisions, consistency passes, feedback tuning, navigation flow, and reduction of clutter.
+    </p>
+    <p>
+      For Raidbound, that work is not secondary. It is one of the reasons the project feels more complete every time a pass lands.
+    </p>
+  </div>
+
+  <div class="project">
+    <h2>Explore More</h2>
+    <div class="button-row">
+      <a class="cta-button" href="raidbound-combat-system.html">Combat System</a>
+      <a class="cta-button" href="raidbound-items-unlocks.html">Items & Unlocks</a>
+      <a class="cta-button" href="raidbound-tools-pipeline.html">Tools Pipeline</a>
+    </div>
+  </div>
+</section>
+<footer><p>© 2026 Monulph</p></footer>
+</body>
+</html>

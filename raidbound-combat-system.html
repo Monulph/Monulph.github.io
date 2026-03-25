@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raidbound | Combat System</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #0f172a; color: #e5e7eb; margin: 0; padding: 0; }
+    header { background: #020617; padding: 44px 20px; text-align: center; border-bottom: 1px solid rgba(148,163,184,0.12); }
+    section { max-width: 1040px; margin: auto; padding: 34px 20px; }
+    h1, h2 { color: #38bdf8; margin: 0 0 10px 0; }
+    h3 { margin: 0 0 10px 0; }
+    a { color: #38bdf8; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .muted { color: #94a3b8; }
+    .project { background: #020617; padding: 22px; margin-bottom: 18px; border-radius: 14px; border: 1px solid rgba(148,163,184,0.15); box-shadow: 0 8px 18px rgba(0,0,0,0.25); }
+    .button-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+    .cta-button { display: inline-flex; align-items: center; justify-content: center; padding: 10px 14px; border-radius: 10px; border: 1px solid rgba(56,189,248,0.35); background: rgba(14,165,233,0.12); color: #e5e7eb; font-weight: 600; }
+    .cta-button:hover { text-decoration: none; border-color: rgba(56,189,248,0.65); background: rgba(14,165,233,0.18); }
+    .pill-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 0; padding: 0; list-style: none; }
+    .pill-list li { padding: 6px 10px; border-radius: 999px; border: 1px solid rgba(148,163,184,0.18); background: rgba(15,23,42,0.6); color: #cbd5e1; font-size: 13px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 14px; }
+    .card { background: rgba(15,23,42,0.55); border: 1px solid rgba(148,163,184,0.14); border-radius: 12px; padding: 16px; }
+    .card h3 { color: #cbd5e1; }
+    .note { border-left: 3px solid #38bdf8; padding: 14px 16px; background: rgba(56,189,248,0.08); border-radius: 10px; }
+    footer { text-align: center; padding: 18px; background: #020617; color: #94a3b8; border-top: 1px solid rgba(148,163,184,0.12); }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Raidbound Combat System</h1>
+  <p>Deterministic, party-based encounters built around clarity, pacing, and strong UI feedback</p>
+  <p class="muted">A tactical roguelite combat layer designed for readability first</p>
+</header>
+<section>
+  <div class="project">
+    <p><a href="index.html">← Back to Home</a></p>
+    <p>
+      Raidbound's combat is built to feel strategic without becoming slow or messy. My goal is to combine the readable menu flow of classic RPG combat with a faster, more modern pace driven by ATB charges, threat generation, and strong feedback.
+    </p>
+    <ul class="pill-list">
+      <li>Threat-based encounters</li>
+      <li>ATB-driven decisions</li>
+      <li>Menu clarity first</li>
+      <li>Deterministic pacing</li>
+      <li>Readable feedback</li>
+    </ul>
+  </div>
+
+  <h2>Core Goals</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Readable at a glance</h3>
+      <p>Heroes, enemies, ATB readiness, damage events, and targeting state need to be understandable quickly. UI readability is part of the combat design, not decoration added later.</p>
+    </div>
+    <div class="card">
+      <h3>Fast but controlled</h3>
+      <p>Encounters move faster than a traditional turn-based battle, but actions still feel deliberate. The player is making tactical choices instead of waiting through long dead time.</p>
+    </div>
+    <div class="card">
+      <h3>Party synergy matters</h3>
+      <p>Heroes are designed around roles, buffs, debuffs, healing, threat generation, and item interactions so runs feel like party-building problems instead of isolated button presses.</p>
+    </div>
+  </div>
+
+  <h2>How a Fight Works</h2>
+  <div class="project">
+    <div class="grid">
+      <div class="card"><h3>1. Encounter begins</h3><p>Combat loads from the map flow, presents enemy composition, and sets the player into a clean battlefield view with immediate information about the incoming pack.</p></div>
+      <div class="card"><h3>2. ATB fills</h3><p>Heroes and enemies build toward actions over time. When a hero reaches a full action threshold, the player can choose to attack or use an ability.</p></div>
+      <div class="card"><h3>3. Threat and effects resolve</h3><p>Healing, damage, taunts, buffs, debuffs, and item effects resolve through shared combat rules so hero kits stay flexible without becoming one-off scripts.</p></div>
+      <div class="card"><h3>4. Feedback sells the hit</h3><p>Card shake, floating numbers, glow states, and transitions reinforce the result of each action so the battle feels alive even though it is menu driven.</p></div>
+    </div>
+  </div>
+
+  <h2>Why I Built It This Way</h2>
+  <div class="project">
+    <p>
+      I wanted Raidbound to avoid two common problems: combat that feels cluttered and combat that feels passive. The structure is intentionally deterministic so I can balance it more reliably, build better tools around it, and keep the experience legible even as more heroes, items, and enemy mechanics are added.
+    </p>
+    <div class="note">
+      The combat system is also being shaped around maintainability. Refactors toward schema-first data, shared ability logic, and cleaner screen responsibilities make it easier to expand the game without dragging legacy behavior forward.
+    </div>
+  </div>
+
+  <h2>What This System Supports</h2>
+  <div class="grid">
+    <div class="card"><h3>Hero identity</h3><p>Distinct classes and roles with their own strengths, ability patterns, and synergy hooks.</p></div>
+    <div class="card"><h3>Item-driven builds</h3><p>Combat stats and effects can shift over a run, creating different solutions to the same encounters.</p></div>
+    <div class="card"><h3>Encounter variety</h3><p>Normal, elite, rare, and boss fights can change pacing and decision pressure without breaking the base rules.</p></div>
+    <div class="card"><h3>Future web demo slicing</h3><p>The screen-based flow and deterministic structure make combat a strong candidate for a focused browser-playable slice.</p></div>
+  </div>
+
+  <div class="project">
+    <h2>Next Related Pages</h2>
+    <div class="button-row">
+      <a class="cta-button" href="raidbound-atb-system.html">ATB System</a>
+      <a class="cta-button" href="raidbound-items-unlocks.html">Items & Unlocks</a>
+      <a class="cta-button" href="raidbound-ui-systems.html">UI Systems</a>
+      <a class="cta-button" href="raidbound-tools-pipeline.html">Tools Pipeline</a>
+    </div>
+  </div>
+</section>
+<footer>
+  <p>© 2026 Monulph</p>
+</footer>
+</body>
+</html>
