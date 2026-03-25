@@ -236,14 +236,11 @@
   <div class="project">
     <h3>Raidbound (Godot 4.6)</h3>
     <p>
-      Raidbound is a tactical roguelite RPG built around party management, readable combat, and deliberate encounter pacing.
-      The project is centered on making layered RPG systems feel clean and understandable: deterministic ATB turns, role-aware items,
-      threat-driven combat decisions, and a UI built to keep complex information readable in motion.
+      Raidbound is a tactical roguelite RPG focused on party management, readable combat, and deliberate encounter pacing.
+      It is built around deterministic ATB turns, role-aware progression, and a presentation style meant to keep layered RPG systems clear while the fight is in motion.
     </p>
     <p>
-      This site section is meant to show both the game and the development thinking behind it. Alongside the demo and screenshots,
-      the system pages below break out the combat flow, turn economy, progression structure, interface decisions, and supporting tools
-      that power the project behind the scenes.
+      This section is meant to show both the game itself and the development thinking behind it. Alongside the demo, screenshots, and video, the pages below break out the original systems-and-tools documentation as well as a second set of focused system pages that expand on encounter flow, economy, progression, interface structure, workflow, and balance support.
     </p>
     <p class="muted">Status: In active development. Public demo available.</p>
 
@@ -273,46 +270,90 @@
       </iframe>
     </div>
 
-    <h4 style="margin:26px 0 8px;">Raidbound Systems &amp; Tools</h4>
+    <h4 style="margin:26px 0 8px;">Raidbound Design &amp; Tools</h4>
     <p class="section-intro">
-      These pages sit under the same Raidbound section and mirror the same card-driven presentation style.
-      They focus on how the game is structured, what design problems each system is solving, and how the supporting tools help keep development organized.
+      These pages break Raidbound down into the systems, tools, and design decisions behind the project.
+      They are meant to show not just what the game looks like, but how it is being built.
+    </p>
+
+    <div class="mini-grid">
+      <div class="mini-card">
+        <h4>Combat System</h4>
+        <p>How actions, feedback, threat, and encounter flow come together inside Raidbound combat.</p>
+        <a class="cta-button" href="raidbound-combat-system.html">Open Page</a>
+      </div>
+
+      <div class="mini-card">
+        <h4>ATB System</h4>
+        <p>A closer look at the deterministic ATB structure, charge economy, and combat pacing goals.</p>
+        <a class="cta-button" href="raidbound-atb-system.html">Open Page</a>
+      </div>
+
+      <div class="mini-card">
+        <h4>Items &amp; Unlocks</h4>
+        <p>Role-aware itemization, unlock logic, progression hooks, and collection screen organization.</p>
+        <a class="cta-button" href="raidbound-items-unlocks.html">Open Page</a>
+      </div>
+
+      <div class="mini-card">
+        <h4>UI Systems</h4>
+        <p>Card layouts, bordered panels, collection screens, readability, and combat information hierarchy.</p>
+        <a class="cta-button" href="raidbound-ui-systems.html">Open Page</a>
+      </div>
+
+      <div class="mini-card">
+        <h4>Tools &amp; Pipeline</h4>
+        <p>Spreadsheet-driven workflows, patching, data organization, and development tooling used on the project.</p>
+        <a class="cta-button" href="raidbound-tools-pipeline.html">Open Page</a>
+      </div>
+
+      <div class="mini-card">
+        <h4>Combat Simulator</h4>
+        <p>The standalone simulation direction used to validate combat balance and support future tuning workflows.</p>
+        <a class="cta-button" href="raidbound-combat-simulator.html">Open Page</a>
+      </div>
+    </div>
+
+    <h4 style="margin:30px 0 8px;">Raidbound Systems</h4>
+    <p class="section-intro">
+      This companion set uses the same grid and presentation style, but focuses on a second layer of documentation for the project.
+      These pages speak more directly to the structure of the run, pacing, progression, interface goals, workflow, and tuning support behind Raidbound.
     </p>
 
     <div class="mini-grid">
       <div class="mini-card">
         <h4>Encounter Flow</h4>
-        <p>How runs move from map choice to combat, rewards, reinforcements, and the overall pacing structure of a Raidbound session.</p>
+        <p>How runs move from pathing and combat into rewards, reinforcements, and the broader pacing structure of a Raidbound session.</p>
         <a class="cta-button" href="raidbound-encounter-flow.html">Open Page</a>
       </div>
 
       <div class="mini-card">
         <h4>Turn Economy</h4>
-        <p>A breakdown of deterministic ATB charges, action timing, combat pacing, and the decision-making pressure built into each turn.</p>
+        <p>A breakdown of deterministic ATB charges, action timing, combat pacing, and the decision pressure created by each turn.</p>
         <a class="cta-button" href="raidbound-turn-economy.html">Open Page</a>
       </div>
 
       <div class="mini-card">
         <h4>Progression &amp; Items</h4>
-        <p>Role-aware itemization, unlock hooks, collection logic, and the systems that shape long-term player progression.</p>
+        <p>Role-aware itemization, unlock hooks, collection structure, and the progression systems that shape long-term player growth.</p>
         <a class="cta-button" href="raidbound-progression-items.html">Open Page</a>
       </div>
 
       <div class="mini-card">
         <h4>Interface Overview</h4>
-        <p>Combat card layouts, bordered panels, readability goals, and the UI hierarchy used to keep information clear during play.</p>
+        <p>Combat card layouts, bordered panes, readability priorities, and the UI hierarchy that keeps complex information understandable.</p>
         <a class="cta-button" href="raidbound-interface-overview.html">Open Page</a>
       </div>
 
       <div class="mini-card">
         <h4>Dev Workflow</h4>
-        <p>Spreadsheet-driven balancing, project organization, patching, and the practical workflow used to keep Raidbound moving forward.</p>
+        <p>Spreadsheet-driven balancing, patch-based iteration, project organization, and the workflow used to keep Raidbound maintainable.</p>
         <a class="cta-button" href="raidbound-dev-workflow.html">Open Page</a>
       </div>
 
       <div class="mini-card">
         <h4>Balance Lab</h4>
-        <p>The simulation and tuning direction used to validate combat balance, compare outcomes, and support future design iteration.</p>
+        <p>The simulation and tuning direction used to validate balance, compare outcomes, and support future combat iteration.</p>
         <a class="cta-button" href="raidbound-balance-lab.html">Open Page</a>
       </div>
     </div>
