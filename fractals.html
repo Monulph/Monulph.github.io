@@ -110,6 +110,48 @@
       margin: 10px 0;
     }
 
+    .systems-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .system-card {
+      display: block;
+      background: rgba(15,23,42,0.6);
+      border: 1px solid rgba(148,163,184,0.15);
+      border-radius: 14px;
+      padding: 18px;
+      color: #e5e7eb;
+      transition: border-color 0.18s ease, transform 0.18s ease, background 0.18s ease;
+    }
+
+    .system-card:hover {
+      text-decoration: none;
+      border-color: rgba(56,189,248,0.45);
+      background: rgba(14,165,233,0.08);
+      transform: translateY(-1px);
+    }
+
+    .system-card h3 {
+      color: #e5e7eb;
+      margin-bottom: 8px;
+    }
+
+    .system-card p {
+      margin: 0 0 12px 0;
+      color: #cbd5e1;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .system-card span {
+      color: #38bdf8;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
     footer {
       text-align: center;
       padding: 18px;
@@ -122,7 +164,7 @@
 <body>
   <header>
     <h1>Fractals</h1>
-    <p>Responsive visuals for music, interaction, and future game mechanics</p>
+    <p>Real-time procedural visuals for music, interaction, and technical art exploration</p>
     <p><a href="index.html">← Back to Home</a></p>
   </header>
 
@@ -130,19 +172,19 @@
     <div class="project">
       <h2>What it is</h2>
       <p>
-        Fractals is an interactive visualizer prototype built to explore a bigger idea than audio response alone. The same reactive visual language that makes music feel alive can also support gameplay: combat bursts, boss transitions, menu states, exploration ambience, and player inputs.
+        Fractals is an interactive visualizer project built as both a standalone visual experience and a larger technical art system. It explores how shader-driven visuals can respond to sound, evolve over time, and eventually support more than pure presentation alone.
       </p>
       <p>
-        In other words, this is both a standalone visual experience and a sandbox for future in-game presentation systems.
+        The long-term goal is not just to make interesting screens, but to build a reusable visual language that can apply to music playback, live interaction, recording, and future game-facing presentation systems.
       </p>
       <p>
         Photosensitivity warning: This fractal experience includes flashing and strobe-like visual effects. Please proceed with caution if you are sensitive to rapidly changing light or patterns.
       </p>
       <ul class="pill-list">
-        <li>Audio-reactive scenes</li>
-        <li>System audio and mic input</li>
-        <li>Fullscreen presentation</li>
-        <li>Prototype for game feedback</li>
+        <li>Shader-driven scenes</li>
+        <li>Real-time visual flow</li>
+        <li>Browser and desktop builds</li>
+        <li>Technical art portfolio project</li>
       </ul>
       <div class="button-row">
         <a class="cta-button" href="fractals/">Launch Fractals</a>
@@ -151,25 +193,83 @@
     </div>
 
     <div class="project">
-      <h2>Why it matters for games</h2>
+      <h2>Why it matters</h2>
       <p>
-        I want this project to help answer a useful design question: how can visuals behave like a mechanic instead of a wallpaper? A reactive layer can signal danger, reward precision, amplify atmosphere, or reinforce pacing without needing extra text or UI clutter.
+        Fractals sits at the intersection of technical art, rendering, and visual system design. It is a place to explore shaders, procedural motion, scene transitions, deployment, and performance while still producing something that feels artistic and experiential.
       </p>
       <p>
-        That makes Fractals useful as a portfolio piece, but also as R&amp;D for future projects where the screen itself participates in the feel of play.
+        That makes it more than a visual toy. It is also research and development for future projects where the screen itself can carry mood, feedback, pacing, and identity.
       </p>
+    </div>
+
+    <div class="project">
+      <h2>How I think about the project</h2>
+      <ol class="steps">
+        <li>Build scenes that feel visually distinct but still belong to one coherent system.</li>
+        <li>Use shaders and real-time rendering as the core visual engine.</li>
+        <li>Improve transitions, responsiveness, and load behavior so the project feels alive.</li>
+        <li>Keep the project deployable in both browser and desktop environments.</li>
+      </ol>
+      <p class="muted">
+        The best version of Fractals is not just a cool effect. It is a stable, scalable, and well-presented graphics project that demonstrates both artistic direction and systems thinking.
+      </p>
+    </div>
+
+    <div class="project">
+      <h2>Technical Breakdown</h2>
+      <p>
+        To present Fractals as a full technical art project rather than a single demo, I broke the work into focused system pages covering rendering, shaders, scene architecture, optimization, direction, and deployment.
+      </p>
+
+      <div class="systems-grid">
+        <a href="fractals-rendering-pipeline.html" class="system-card">
+          <h3>Rendering Pipeline</h3>
+          <p>How the project stays visually active through real-time frame updates and scene rendering.</p>
+          <span>Open Page →</span>
+        </a>
+
+        <a href="fractals-shader-system.html" class="system-card">
+          <h3>Shader System</h3>
+          <p>The modular shader foundation that drives the project’s visual identity and variation.</p>
+          <span>Open Page →</span>
+        </a>
+
+        <a href="fractals-scene-family-architecture.html" class="system-card">
+          <h3>Scene &amp; Family Architecture</h3>
+          <p>How scenes are grouped, expanded, and organized into a scalable visual library.</p>
+          <span>Open Page →</span>
+        </a>
+
+        <a href="fractals-performance-optimization.html" class="system-card">
+          <h3>Performance &amp; Optimization</h3>
+          <p>Startup, stability, and rendering improvements made to keep the project responsive.</p>
+          <span>Open Page →</span>
+        </a>
+
+        <a href="fractals-real-time-direction.html" class="system-card">
+          <h3>Real-Time Direction</h3>
+          <p>The logic behind scene changes, locking, pacing, and user control during playback.</p>
+          <span>Open Page →</span>
+        </a>
+
+        <a href="fractals-electron-web-deployment.html" class="system-card">
+          <h3>Electron + Web Deployment</h3>
+          <p>How the project is packaged for both public browser access and desktop presentation.</p>
+          <span>Open Page →</span>
+        </a>
+      </div>
     </div>
 
     <div class="project">
       <h2>Best way to use it</h2>
       <ol class="steps">
-        <li>Open the visualizer and interact with the controls first.</li>
-        <li>Use <strong>Mic</strong> for live input, or <strong>System Audio</strong> to react to your computer audio when your browser allows it.</li>
-        <li>Switch to <strong>Fullscreen</strong> for the intended presentation.</li>
-        <li>Press <strong>F11</strong> to set your web browser to fullscreen for the intended presentation.</li>
+        <li>Launch the visualizer and interact with the controls first.</li>
+        <li>Try the project in fullscreen for the intended presentation.</li>
+        <li>Let it run long enough to experience scene changes and visual pacing.</li>
+        <li>Use the breakdown pages above if you want to see how the project is structured as a technical art system.</li>
       </ol>
       <p class="muted">
-        Browser security requires a user interaction before microphone, display capture, and fullscreen behavior can begin. That is expected and built into the launch flow.
+        Fractals is both a live visual experience and a documented portfolio project. The interactive build shows the result, while the system pages explain how it is being constructed.
       </p>
     </div>
   </section>
