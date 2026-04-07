@@ -152,6 +152,32 @@
       font-size: 14px;
     }
 
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .highlight-card {
+      background: rgba(15,23,42,0.6);
+      border: 1px solid rgba(148,163,184,0.15);
+      border-radius: 14px;
+      padding: 18px;
+    }
+
+    .highlight-card h3 {
+      color: #e5e7eb;
+      margin-bottom: 8px;
+    }
+
+    .highlight-card p {
+      margin: 0;
+      color: #cbd5e1;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
     footer {
       text-align: center;
       padding: 18px;
@@ -164,25 +190,26 @@
 <body>
   <header>
     <h1>Fractals</h1>
-    <p>Real-time procedural visuals for music, interaction, and technical art exploration</p>
+    <p>Real-time procedural visuals for rendering, interaction, and technical art exploration</p>
     <p><a href="index.html">← Back to Home</a></p>
   </header>
 
   <section>
     <div class="project">
-      <h2>What it is</h2>
+      <h2>Overview</h2>
       <p>
-        Fractals is an interactive visualizer project built as both a standalone visual experience and a larger technical art system. It explores how shader-driven visuals can respond to sound, evolve over time, and eventually support more than pure presentation alone.
+        Fractals is a real-time visual project built to explore shader-driven motion, scene flow, rendering behavior, and technical art direction in a live interactive format.
       </p>
       <p>
-        The long-term goal is not just to make interesting screens, but to build a reusable visual language that can apply to music playback, live interaction, recording, and future game-facing presentation systems.
+        What began as a visualizer has grown into a larger portfolio system focused on how procedural visuals can be shaped, organized, optimized, and eventually applied to broader game-facing presentation.
       </p>
       <p>
-        Photosensitivity warning: This fractal experience includes flashing and strobe-like visual effects. Please proceed with caution if you are sensitive to rapidly changing light or patterns.
+        Photosensitivity warning: This project includes flashing and strobe-like visual effects. Please proceed carefully if you are sensitive to rapidly changing light or patterns.
       </p>
       <ul class="pill-list">
         <li>Shader-driven scenes</li>
         <li>Real-time visual flow</li>
+        <li>Scene and family architecture</li>
         <li>Browser and desktop builds</li>
         <li>Technical art portfolio project</li>
       </ul>
@@ -193,25 +220,69 @@
     </div>
 
     <div class="project">
-      <h2>Why it matters</h2>
+      <h2>What makes this project important</h2>
       <p>
-        Fractals sits at the intersection of technical art, rendering, and visual system design. It is a place to explore shaders, procedural motion, scene transitions, deployment, and performance while still producing something that feels artistic and experiential.
+        Fractals sits at the intersection of technical art, rendering, visual design, and systems thinking. It is a place to explore how shaders, motion language, timing, and performance can work together to create something that feels both artistic and structured.
       </p>
       <p>
-        That makes it more than a visual toy. It is also research and development for future projects where the screen itself can carry mood, feedback, pacing, and identity.
+        The goal is not just to generate interesting screens. The goal is to build a reusable visual system that can eventually inform future game presentation, menu motion, environmental energy, transitions, and moment-to-moment visual feedback.
       </p>
+    </div>
+
+    <div class="project">
+      <h2>Project highlights</h2>
+      <div class="highlight-grid">
+        <div class="highlight-card">
+          <h3>Real-time rendering</h3>
+          <p>
+            Built around continuously updating visuals rather than static effects, with an emphasis on flow, motion, and screen presence.
+          </p>
+        </div>
+
+        <div class="highlight-card">
+          <h3>Scalable structure</h3>
+          <p>
+            Scenes are being organized into families and systems so the project can grow intentionally instead of becoming a collection of disconnected experiments.
+          </p>
+        </div>
+
+        <div class="highlight-card">
+          <h3>Technical art framing</h3>
+          <p>
+            This is meant to show more than visuals alone. It demonstrates rendering decisions, system design, iteration, deployment, and optimization.
+          </p>
+        </div>
+
+        <div class="highlight-card">
+          <h3>Game-facing potential</h3>
+          <p>
+            The long-term value of Fractals is in how these ideas may influence future game feel, visual pacing, and reactive presentation systems.
+          </p>
+        </div>
+      </div>
     </div>
 
     <div class="project">
       <h2>How I think about the project</h2>
       <ol class="steps">
-        <li>Build scenes that feel visually distinct but still belong to one coherent system.</li>
-        <li>Use shaders and real-time rendering as the core visual engine.</li>
-        <li>Improve transitions, responsiveness, and load behavior so the project feels alive.</li>
-        <li>Keep the project deployable in both browser and desktop environments.</li>
+        <li>Build scenes that feel visually distinct while still belonging to one larger visual language.</li>
+        <li>Use shaders and rendering logic as the foundation instead of treating visuals as decoration added afterward.</li>
+        <li>Improve transitions, pacing, responsiveness, and startup behavior so the project feels alive and intentional.</li>
+        <li>Keep the project presentable in both browser and desktop environments.</li>
+        <li>Document the systems clearly enough that the project reads as technical art work, not just a cool demo.</li>
       </ol>
       <p class="muted">
-        The best version of Fractals is not just a cool effect. It is a stable, scalable, and well-presented graphics project that demonstrates both artistic direction and systems thinking.
+        The strongest version of Fractals is a polished, scalable graphics project that demonstrates artistic direction, rendering curiosity, and practical systems thinking.
+      </p>
+    </div>
+
+    <div class="project">
+      <h2>Why it belongs in my portfolio</h2>
+      <p>
+        Fractals is one of the clearest examples of how I approach technical art problems: start with a visual target, build the underlying system, improve how it performs, and shape it into something presentable and expandable.
+      </p>
+      <p>
+        Instead of stopping at isolated shader studies, this project pushes toward a more complete portfolio piece with architecture, deployment, optimization, direction systems, and documented breakdown pages.
       </p>
     </div>
 
@@ -261,15 +332,15 @@
     </div>
 
     <div class="project">
-      <h2>Best way to use it</h2>
+      <h2>Best way to experience it</h2>
       <ol class="steps">
-        <li>Launch the visualizer and interact with the controls first.</li>
-        <li>Try the project in fullscreen for the intended presentation.</li>
-        <li>Let it run long enough to experience scene changes and visual pacing.</li>
-        <li>Use the breakdown pages above if you want to see how the project is structured as a technical art system.</li>
+        <li>Launch the visualizer and interact with it directly.</li>
+        <li>Try it fullscreen for the strongest presentation.</li>
+        <li>Let it run long enough to experience scene changes, pacing, and visual variation.</li>
+        <li>Use the breakdown pages above to see how the project is structured as a technical art system.</li>
       </ol>
       <p class="muted">
-        Fractals is both a live visual experience and a documented portfolio project. The interactive build shows the result, while the system pages explain how it is being constructed.
+        Fractals is meant to work on two levels: as a live visual experience, and as a documented portfolio project that explains how the experience is being built.
       </p>
     </div>
   </section>
