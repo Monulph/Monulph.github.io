@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fractals | Real-Time Direction</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #0f172a; color: #e5e7eb; margin: 0; padding: 0; }
+    header { background: #020617; padding: 44px 20px; text-align: center; border-bottom: 1px solid rgba(148,163,184,0.12); }
+    section { max-width: 1040px; margin: auto; padding: 34px 20px; }
+    h1, h2 { color: #38bdf8; margin: 0 0 10px 0; }
+    h3 { margin: 0 0 10px 0; }
+    a { color: #38bdf8; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .muted { color: #94a3b8; }
+    .project { background: #020617; padding: 22px; margin-bottom: 18px; border-radius: 14px; border: 1px solid rgba(148,163,184,0.15); box-shadow: 0 8px 18px rgba(0,0,0,0.25); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 14px; }
+    .card { background: rgba(15,23,42,0.55); border: 1px solid rgba(148,163,184,0.14); border-radius: 12px; padding: 16px; }
+    .pill-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 0; padding: 0; list-style: none; }
+    .pill-list li { padding: 6px 10px; border-radius: 999px; border: 1px solid rgba(148,163,184,0.18); background: rgba(15,23,42,0.6); color: #cbd5e1; font-size: 13px; }
+    .button-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+    .cta-button { display: inline-flex; align-items: center; justify-content: center; padding: 10px 14px; border-radius: 10px; border: 1px solid rgba(56,189,248,0.35); background: rgba(14,165,233,0.12); color: #e5e7eb; font-weight: 600; }
+    .cta-button:hover { text-decoration: none; border-color: rgba(56,189,248,0.65); background: rgba(14,165,233,0.18); }
+    .step { margin-top: 14px; padding: 14px 16px; border-radius: 12px; background: rgba(56,189,248,0.06); border: 1px solid rgba(56,189,248,0.15); }
+    footer { text-align: center; padding: 18px; background: #020617; color: #94a3b8; border-top: 1px solid rgba(148,163,184,0.12); }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Fractals Real-Time Direction</h1>
+  <p>Automation and control working together to shape a continuous visual session</p>
+  <p class="muted">A direction layer for choosing when the system changes and when it holds still</p>
+</header>
+<section>
+  <div class="project">
+    <p><a href="index.html">← Back to Home</a></p>
+    <p>
+      Fractals is not meant to be a fixed slideshow of effects. It is a directed real-time system that chooses when to transition, how long to stay with a scene, and when the user should be able to hold onto a moment. The project balances automated evolution with hands-on control so it can work for passive viewing, live experimentation, and captured recordings.
+    </p>
+    <ul class="pill-list">
+      <li>Automated scene flow</li>
+      <li>User scene locking</li>
+      <li>Transition control</li>
+      <li>Live creative direction</li>
+    </ul>
+  </div>
+
+  <h2>Design Problem</h2>
+  <div class="project">
+    <p>
+      A visualizer loses impact if it changes too often, but it also becomes flat if it never evolves. The hard part is not just making good visuals. It is deciding when the system should move forward, when it should hold, and how to avoid transitions that feel abrupt or artificial.
+    </p>
+    <p>
+      Fractals needed a direction layer that could preserve flow while still giving the user ways to control what stays on screen, especially for recording, showcasing, or studying particular scenes.
+    </p>
+  </div>
+
+  <h2>How It Works</h2>
+  <div class="grid">
+    <div class="card"><h3>Choose active scene</h3><p>The system determines which scene or scene combination is currently driving the visual output.</p></div>
+    <div class="card"><h3>Control transition timing</h3><p>Scene changes are directed to avoid hard cuts that would break the mood or make the visual session feel mechanical.</p></div>
+    <div class="card"><h3>Allow user intervention</h3><p>Controls like scene locking make it possible to hold a visual moment instead of always surrendering to automation.</p></div>
+    <div class="card"><h3>Support layered playback</h3><p>As the project evolves, direction systems can also support running multiple scenes together for denser visual behavior.</p></div>
+  </div>
+
+  <h2>Why It Fits Fractals</h2>
+  <div class="project">
+    <div class="step"><strong>It respects pacing.</strong> The project works best when visual changes feel earned and rhythmic rather than random or timer-driven.</div>
+    <div class="step"><strong>It supports creators.</strong> Recording or showcasing the project becomes easier when the user can lock scenes and guide what stays visible.</div>
+    <div class="step"><strong>It pushes the system beyond a demo.</strong> Direction logic turns Fractals into a real-time experience with intent, not just a rotating list of effects.</div>
+  </div>
+
+  <h2>Technical Value</h2>
+  <div class="grid">
+    <div class="card"><h3>Behavioral design</h3><p>This work connects graphics to state logic, timing control, and interaction design rather than leaving them as separate concerns.</p></div>
+    <div class="card"><h3>Portfolio signal</h3><p>It shows systems thinking about how procedural content is presented over time, not only how it looks in a still frame.</p></div>
+    <div class="card"><h3>Creative utility</h3><p>Control features make the project more useful in practice, especially for recording, curation, and future live presentation.</p></div>
+  </div>
+
+  <div class="project">
+    <h2>Explore More</h2>
+    <div class="button-row">
+      <a class="cta-button" href="fractals-electron-web-deployment.html">Electron + Web Deployment</a>
+      <a class="cta-button" href="fractals-performance-optimization.html">Performance & Optimization</a>
+      <a class="cta-button" href="fractals-rendering-pipeline.html">Rendering Pipeline</a>
+      <a class="cta-button" href="fractals-scene-family-architecture.html">Scene & Family Architecture</a>
+      <a class="cta-button" href="fractals-shader-system.html">Shader System</a>  
+    </div>
+  </div>
+</section>
+<footer><p>© 2026 Monulph</p></footer>
+</body>
+</html>
