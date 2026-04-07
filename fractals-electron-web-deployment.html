@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fractals | Electron + Web Deployment</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #0f172a; color: #e5e7eb; margin: 0; padding: 0; }
+    header { background: #020617; padding: 44px 20px; text-align: center; border-bottom: 1px solid rgba(148,163,184,0.12); }
+    section { max-width: 1040px; margin: auto; padding: 34px 20px; }
+    h1, h2 { color: #38bdf8; margin: 0 0 10px 0; }
+    h3 { margin: 0 0 10px 0; }
+    a { color: #38bdf8; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .muted { color: #94a3b8; }
+    .project { background: #020617; padding: 22px; margin-bottom: 18px; border-radius: 14px; border: 1px solid rgba(148,163,184,0.15); box-shadow: 0 8px 18px rgba(0,0,0,0.25); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 14px; }
+    .card { background: rgba(15,23,42,0.55); border: 1px solid rgba(148,163,184,0.14); border-radius: 12px; padding: 16px; }
+    .pill-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 0; padding: 0; list-style: none; }
+    .pill-list li { padding: 6px 10px; border-radius: 999px; border: 1px solid rgba(148,163,184,0.18); background: rgba(15,23,42,0.6); color: #cbd5e1; font-size: 13px; }
+    .button-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+    .cta-button { display: inline-flex; align-items: center; justify-content: center; padding: 10px 14px; border-radius: 10px; border: 1px solid rgba(56,189,248,0.35); background: rgba(14,165,233,0.12); color: #e5e7eb; font-weight: 600; }
+    .cta-button:hover { text-decoration: none; border-color: rgba(56,189,248,0.65); background: rgba(14,165,233,0.18); }
+    .step { margin-top: 14px; padding: 14px 16px; border-radius: 12px; background: rgba(56,189,248,0.06); border: 1px solid rgba(56,189,248,0.15); }
+    footer { text-align: center; padding: 18px; background: #020617; color: #94a3b8; border-top: 1px solid rgba(148,163,184,0.12); }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Fractals Electron + Web Deployment</h1>
+  <p>One visual project spanning browser delivery and desktop execution</p>
+  <p class="muted">Deployment work that turns the project from a local experiment into a shareable experience</p>
+</header>
+<section>
+  <div class="project">
+    <p><a href="index.html">← Back to Home</a></p>
+    <p>
+      Fractals is built to live in more than one environment. It runs in the browser through GitHub Pages and also as a desktop application through Electron. That dual deployment path matters because it changes who can access the work, how it performs, and how the project can be presented as both a portfolio piece and a standalone creative tool.
+    </p>
+    <ul class="pill-list">
+      <li>Browser deployment</li>
+      <li>Electron desktop build</li>
+      <li>Cross-environment rendering</li>
+      <li>Shareable technical art project</li>
+    </ul>
+  </div>
+
+  <h2>Design Problem</h2>
+  <div class="project">
+    <p>
+      A project like Fractals gains value when people can actually access it, but graphics-heavy work often behaves differently across environments. Browser rendering, desktop packaging, startup flow, and shader handling can introduce different problems even when the visuals are built from the same core code.
+    </p>
+    <p>
+      The project needed a deployment path that could support both easy public access and a stronger desktop presentation without splitting into two unrelated versions.
+    </p>
+  </div>
+
+  <h2>How It Works</h2>
+  <div class="grid">
+    <div class="card"><h3>Build for web</h3><p>The browser version allows the project to live publicly as part of the Monulph portfolio and makes the work immediately accessible.</p></div>
+    <div class="card"><h3>Build for desktop</h3><p>The Electron version supports a standalone experience and creates room for more controlled presentation on local machines.</p></div>
+    <div class="card"><h3>Resolve environment issues</h3><p>Renderer setup, shader compilation, and load behavior are reviewed across both paths so the project remains dependable.</p></div>
+    <div class="card"><h3>Present as a system</h3><p>Deployment is treated as part of the project design because accessibility and execution quality both shape how the work is perceived.</p></div>
+  </div>
+
+  <h2>Why It Fits Fractals</h2>
+  <div class="project">
+    <div class="step"><strong>It improves reach.</strong> The web version makes the project easy to share, which is critical for portfolio visibility and public experimentation.</div>
+    <div class="step"><strong>It supports a stronger showcase.</strong> The desktop path creates room for a more controlled environment when browser limitations are not ideal.</div>
+    <div class="step"><strong>It reflects production reality.</strong> Technical art work often has to survive different runtimes, not just the one where it was first authored.</div>
+  </div>
+
+  <h2>Technical Value</h2>
+  <div class="grid">
+    <div class="card"><h3>Platform awareness</h3><p>This work shows an understanding that rendering, setup, and presentation shift across environments and must be handled intentionally.</p></div>
+    <div class="card"><h3>Portfolio signal</h3><p>It demonstrates that the project is not only visually interesting but also packaged and deployed in ways that make it usable and reviewable.</p></div>
+    <div class="card"><h3>Long-term flexibility</h3><p>Maintaining both deployment paths keeps the project adaptable for sharing, iteration, and future expansion.</p></div>
+  </div>
+
+  <div class="project">
+    <h2>Explore More</h2>
+    <div class="button-row">
+      <a class="cta-button" href="fractals-performance-optimization.html">Performance & Optimization</a>
+      <a class="cta-button" href="fractals-real-time-direction.html">Real-Time Direction</a>
+      <a class="cta-button" href="fractals-rendering-pipeline.html">Rendering Pipeline</a>
+      <a class="cta-button" href="fractals-scene-family-architecture.html">Scene & Family Architecture</a>
+      <a class="cta-button" href="fractals-shader-system.html">Shader System</a>
+    </div>
+  </div>
+</section>
+<footer><p>© 2026 Monulph</p></footer>
+</body>
+</html>
