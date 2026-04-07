@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fractals | Shader System</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #0f172a; color: #e5e7eb; margin: 0; padding: 0; }
+    header { background: #020617; padding: 44px 20px; text-align: center; border-bottom: 1px solid rgba(148,163,184,0.12); }
+    section { max-width: 1040px; margin: auto; padding: 34px 20px; }
+    h1, h2 { color: #38bdf8; margin: 0 0 10px 0; }
+    h3 { margin: 0 0 10px 0; }
+    a { color: #38bdf8; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .muted { color: #94a3b8; }
+    .project { background: #020617; padding: 22px; margin-bottom: 18px; border-radius: 14px; border: 1px solid rgba(148,163,184,0.15); box-shadow: 0 8px 18px rgba(0,0,0,0.25); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 14px; }
+    .card { background: rgba(15,23,42,0.55); border: 1px solid rgba(148,163,184,0.14); border-radius: 12px; padding: 16px; }
+    .pill-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 0; padding: 0; list-style: none; }
+    .pill-list li { padding: 6px 10px; border-radius: 999px; border: 1px solid rgba(148,163,184,0.18); background: rgba(15,23,42,0.6); color: #cbd5e1; font-size: 13px; }
+    .button-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+    .cta-button { display: inline-flex; align-items: center; justify-content: center; padding: 10px 14px; border-radius: 10px; border: 1px solid rgba(56,189,248,0.35); background: rgba(14,165,233,0.12); color: #e5e7eb; font-weight: 600; }
+    .cta-button:hover { text-decoration: none; border-color: rgba(56,189,248,0.65); background: rgba(14,165,233,0.18); }
+    .step { margin-top: 14px; padding: 14px 16px; border-radius: 12px; background: rgba(56,189,248,0.06); border: 1px solid rgba(56,189,248,0.15); }
+    footer { text-align: center; padding: 18px; background: #020617; color: #94a3b8; border-top: 1px solid rgba(148,163,184,0.12); }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Fractals Shader System</h1>
+  <p>Modular shader-driven visuals built to create variety without losing identity</p>
+  <p class="muted">The visual language of the project lives in its shaders</p>
+</header>
+<section>
+  <div class="project">
+    <p><a href="index.html">← Back to Home</a></p>
+    <p>
+      The shader system is the heart of Fractals. It is where motion, pattern, color, and distortion come together to create each scene. Instead of treating shaders as isolated one-off tricks, the project uses them as reusable visual building blocks that can be organized, tuned, and expanded over time.
+    </p>
+    <ul class="pill-list">
+      <li>Fragment shader driven</li>
+      <li>Modular visual logic</li>
+      <li>Reusable math structures</li>
+      <li>Procedural image generation</li>
+    </ul>
+  </div>
+
+  <h2>Design Problem</h2>
+  <div class="project">
+    <p>
+      A visualizer can quickly become repetitive if each scene is just a small variation of the last, but it can also become messy if every shader is built from scratch with no shared language. I wanted Fractals to have range without feeling random or disconnected.
+    </p>
+    <p>
+      The answer was to treat shaders like a system. Shared ideas, reusable patterns, and parameter-driven variation let the project push into many looks while still feeling like one visual world.
+    </p>
+  </div>
+
+  <h2>How It Works</h2>
+  <div class="grid">
+    <div class="card"><h3>Define base math</h3><p>Core trigonometric motion, coordinate warping, and repetition logic establish the base behavior of a scene.</p></div>
+    <div class="card"><h3>Layer variation</h3><p>Parameters for scale, speed, symmetry, feedback, and palette shift the same shader foundations into very different outputs.</p></div>
+    <div class="card"><h3>Shape identity</h3><p>Each shader is tuned toward a specific visual role so scenes feel intentional rather than like random experiments.</p></div>
+    <div class="card"><h3>Reuse across families</h3><p>Shared logic can be adapted across multiple families, which makes it easier to grow the project without losing cohesion.</p></div>
+  </div>
+
+  <h2>Why It Fits Fractals</h2>
+  <div class="project">
+    <div class="step"><strong>It supports procedural range.</strong> Small changes in shader logic can create major changes in output, which is perfect for a project built around evolving visuals.</div>
+    <div class="step"><strong>It rewards iteration.</strong> Because so much of the look lives in parameters and reusable logic, scenes can be refined quickly without restarting from zero.</div>
+    <div class="step"><strong>It gives the project a voice.</strong> The shaders are not just effects. They define the style, energy, and personality of the whole experience.</div>
+  </div>
+
+  <h2>Technical Value</h2>
+  <div class="grid">
+    <div class="card"><h3>Systemic design</h3><p>This approach shows shader work as an organized production system rather than isolated visuals made one at a time.</p></div>
+    <div class="card"><h3>Portfolio signal</h3><p>It demonstrates procedural thinking, graphics literacy, and the ability to shape artistic output through code.</p></div>
+    <div class="card"><h3>Future expansion</h3><p>A modular shader structure creates room for more passes, more effects, and more polished transitions as the project grows.</p></div>
+  </div>
+
+  <div class="project">
+    <h2>Explore More</h2>
+    <div class="button-row">
+      <a class="cta-button" href="fractals-electron-web-deployment.html">Electron + Web Deployment</a>
+      <a class="cta-button" href="fractals-performance-optimization.html">Performance & Optimization</a>
+      <a class="cta-button" href="fractals-real-time-direction.html">Real-Time Direction</a>
+      <a class="cta-button" href="fractals-rendering-pipeline.html">Rendering Pipeline</a>
+      <a class="cta-button" href="fractals-scene-family-architecture.html">Scene & Family Architecture</a>
+    </div>
+  </div>
+</section>
+<footer><p>© 2026 Monulph</p></footer>
+</body>
+</html>
