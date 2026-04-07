@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fractals | Rendering Pipeline</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #0f172a; color: #e5e7eb; margin: 0; padding: 0; }
+    header { background: #020617; padding: 44px 20px; text-align: center; border-bottom: 1px solid rgba(148,163,184,0.12); }
+    section { max-width: 1040px; margin: auto; padding: 34px 20px; }
+    h1, h2 { color: #38bdf8; margin: 0 0 10px 0; }
+    h3 { margin: 0 0 10px 0; }
+    a { color: #38bdf8; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .muted { color: #94a3b8; }
+    .project { background: #020617; padding: 22px; margin-bottom: 18px; border-radius: 14px; border: 1px solid rgba(148,163,184,0.15); box-shadow: 0 8px 18px rgba(0,0,0,0.25); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 14px; }
+    .card { background: rgba(15,23,42,0.55); border: 1px solid rgba(148,163,184,0.14); border-radius: 12px; padding: 16px; }
+    .pill-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 0; padding: 0; list-style: none; }
+    .pill-list li { padding: 6px 10px; border-radius: 999px; border: 1px solid rgba(148,163,184,0.18); background: rgba(15,23,42,0.6); color: #cbd5e1; font-size: 13px; }
+    .button-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+    .cta-button { display: inline-flex; align-items: center; justify-content: center; padding: 10px 14px; border-radius: 10px; border: 1px solid rgba(56,189,248,0.35); background: rgba(14,165,233,0.12); color: #e5e7eb; font-weight: 600; }
+    .cta-button:hover { text-decoration: none; border-color: rgba(56,189,248,0.65); background: rgba(14,165,233,0.18); }
+    .step { margin-top: 14px; padding: 14px 16px; border-radius: 12px; background: rgba(56,189,248,0.06); border: 1px solid rgba(56,189,248,0.15); }
+    footer { text-align: center; padding: 18px; background: #020617; color: #94a3b8; border-top: 1px solid rgba(148,163,184,0.12); }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Fractals Rendering Pipeline</h1>
+  <p>Real-time visual orchestration built for flow, responsiveness, and continuous motion</p>
+  <p class="muted">A rendering structure designed to stay alive while the project evolves on screen</p>
+</header>
+<section>
+  <div class="project">
+    <p><a href="index.html">← Back to Home</a></p>
+    <p>
+      Fractals is built around a real-time rendering pipeline that keeps shader-driven visuals active across both browser and desktop builds. The goal is not just to draw effects, but to maintain a sense of uninterrupted motion while scenes, parameters, and systems update around them.
+    </p>
+    <ul class="pill-list">
+      <li>Real-time frame updates</li>
+      <li>WebGL shader output</li>
+      <li>Continuous motion</li>
+      <li>Responsive visual flow</li>
+    </ul>
+  </div>
+
+  <h2>Design Problem</h2>
+  <div class="project">
+    <p>
+      Procedural visuals can look great in isolation, but projects like this quickly break immersion if loading, scene swaps, or setup work cause visible stalls. A visualizer needs to feel present at all times. Even short pauses make it feel less like a living system and more like a sequence of disconnected demos.
+    </p>
+    <p>
+      The rendering pipeline for Fractals was shaped around that concern: keep the project visually alive, reduce blocking work, and make the output feel like one continuous experience rather than a collection of separate scenes.
+    </p>
+  </div>
+
+  <h2>How It Works</h2>
+  <div class="grid">
+    <div class="card"><h3>Update frame state</h3><p>Each frame updates timing, viewport information, and scene-level parameters so the renderer always has current state to work from.</p></div>
+    <div class="card"><h3>Feed uniforms</h3><p>Time, resolution, motion values, and artistic controls are passed into shaders to drive the current visual behavior.</p></div>
+    <div class="card"><h3>Render active scene</h3><p>The active shader or scene combination is drawn in real time, producing the visible output for the current frame.</p></div>
+    <div class="card"><h3>Maintain continuity</h3><p>Scene changes and system updates are organized so the visual output keeps moving instead of freezing during transitions.</p></div>
+  </div>
+
+  <h2>Why It Fits Fractals</h2>
+  <div class="project">
+    <div class="step"><strong>It protects the illusion.</strong> The project works best when the visuals feel alive, not paused behind setup work or waiting on the next effect.</div>
+    <div class="step"><strong>It supports experimentation.</strong> Because the rendering layer is always active, new scenes, parameter tuning, and family variations can be tested quickly.</div>
+    <div class="step"><strong>It scales into a system.</strong> The pipeline is not only about drawing one effect well. It is about supporting a larger growing visual platform with dependable flow.</div>
+  </div>
+
+  <h2>Technical Value</h2>
+  <div class="grid">
+    <div class="card"><h3>Performance minded</h3><p>Rendering decisions are tied directly to startup speed, frame stability, and how much work happens during scene changes.</p></div>
+    <div class="card"><h3>Portfolio signal</h3><p>This page shows graphics thinking beyond single shaders by focusing on the structure that keeps a full visual system running.</p></div>
+    <div class="card"><h3>Foundation for growth</h3><p>A solid pipeline makes it easier to add new passes, new families, and more advanced transitions without rebuilding the project each time.</p></div>
+  </div>
+
+  <div class="project">
+    <h2>Explore More</h2>
+    <div class="button-row">
+      <a class="cta-button" href="fractals-electron-web-deployment.html">Electron + Web Deployment</a>
+      <a class="cta-button" href="fractals-performance-optimization.html">Performance & Optimization</a>
+      <a class="cta-button" href="fractals-real-time-direction.html">Real-Time Direction</a>
+      <a class="cta-button" href="fractals-scene-family-architecture.html">Scene & Family Architecture</a>
+      <a class="cta-button" href="fractals-shader-system.html">Shader System</a>
+    </div>
+  </div>
+</section>
+<footer><p>© 2026 Monulph</p></footer>
+</body>
+</html>
