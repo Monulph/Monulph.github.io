@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fractals | Scene & Family Architecture</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #0f172a; color: #e5e7eb; margin: 0; padding: 0; }
+    header { background: #020617; padding: 44px 20px; text-align: center; border-bottom: 1px solid rgba(148,163,184,0.12); }
+    section { max-width: 1040px; margin: auto; padding: 34px 20px; }
+    h1, h2 { color: #38bdf8; margin: 0 0 10px 0; }
+    h3 { margin: 0 0 10px 0; }
+    a { color: #38bdf8; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .muted { color: #94a3b8; }
+    .project { background: #020617; padding: 22px; margin-bottom: 18px; border-radius: 14px; border: 1px solid rgba(148,163,184,0.15); box-shadow: 0 8px 18px rgba(0,0,0,0.25); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 14px; }
+    .card { background: rgba(15,23,42,0.55); border: 1px solid rgba(148,163,184,0.14); border-radius: 12px; padding: 16px; }
+    .pill-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 0; padding: 0; list-style: none; }
+    .pill-list li { padding: 6px 10px; border-radius: 999px; border: 1px solid rgba(148,163,184,0.18); background: rgba(15,23,42,0.6); color: #cbd5e1; font-size: 13px; }
+    .button-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+    .cta-button { display: inline-flex; align-items: center; justify-content: center; padding: 10px 14px; border-radius: 10px; border: 1px solid rgba(56,189,248,0.35); background: rgba(14,165,233,0.12); color: #e5e7eb; font-weight: 600; }
+    .cta-button:hover { text-decoration: none; border-color: rgba(56,189,248,0.65); background: rgba(14,165,233,0.18); }
+    .step { margin-top: 14px; padding: 14px 16px; border-radius: 12px; background: rgba(56,189,248,0.06); border: 1px solid rgba(56,189,248,0.15); }
+    footer { text-align: center; padding: 18px; background: #020617; color: #94a3b8; border-top: 1px solid rgba(148,163,184,0.12); }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Fractals Scene & Family Architecture</h1>
+  <p>Content organization built to grow a visual project without losing control</p>
+  <p class="muted">A structure for making many scenes feel related instead of scattered</p>
+</header>
+<section>
+  <div class="project">
+    <p><a href="index.html">← Back to Home</a></p>
+    <p>
+      Fractals organizes its visuals into scenes and families so the project can scale cleanly. A scene represents a single active visual state, while a family groups related scenes that share common logic, motion language, or visual identity. That structure helps the project grow in a controlled way instead of turning into an untracked collection of one-off effects.
+    </p>
+    <ul class="pill-list">
+      <li>Scene-based structure</li>
+      <li>Family grouping</li>
+      <li>Shared visual DNA</li>
+      <li>Scalable content design</li>
+    </ul>
+  </div>
+
+  <h2>Design Problem</h2>
+  <div class="project">
+    <p>
+      Once a visual project starts accumulating many ideas, it becomes easy to lose track of what belongs together, what should transition well, and what can be expanded later. Without structure, adding content creates clutter instead of depth.
+    </p>
+    <p>
+      Fractals solves that by organizing visuals into families. Instead of asking whether each new scene is cool on its own, the project asks how it relates to the larger system and whether it strengthens the overall visual language.
+    </p>
+  </div>
+
+  <h2>How It Works</h2>
+  <div class="grid">
+    <div class="card"><h3>Build a scene</h3><p>Each scene establishes a specific combination of shader logic, motion, and presentation for one active visual state.</p></div>
+    <div class="card"><h3>Group by family</h3><p>Related scenes are placed into families so variations can be explored without losing their shared visual identity.</p></div>
+    <div class="card"><h3>Direct transitions</h3><p>The system can choose between scenes with more intention because families create meaningful relationships between content.</p></div>
+    <div class="card"><h3>Expand in passes</h3><p>New content can be planned and added in structured batches, which makes growth more manageable over time.</p></div>
+  </div>
+
+  <h2>Why It Fits Fractals</h2>
+  <div class="project">
+    <div class="step"><strong>It turns experiments into a library.</strong> Good ideas do not stay isolated. They become part of a larger organized visual ecosystem.</div>
+    <div class="step"><strong>It improves direction.</strong> Families make it easier to choose what should follow what and which visuals belong together in a longer session.</div>
+    <div class="step"><strong>It supports long-term production.</strong> As the project grows into larger passes and more scenes, the architecture gives that growth a place to live.</div>
+  </div>
+
+  <h2>Technical Value</h2>
+  <div class="grid">
+    <div class="card"><h3>Content scalability</h3><p>This structure shows that the project is being built like a system, not just accumulated piece by piece.</p></div>
+    <div class="card"><h3>Portfolio signal</h3><p>It communicates planning, technical organization, and the ability to think about art production as an expandable framework.</p></div>
+    <div class="card"><h3>Better iteration loops</h3><p>Families make it easier to compare variants, refine directions, and decide where the next content pass should go.</p></div>
+  </div>
+
+  <div class="project">
+    <h2>Explore More</h2>
+    <div class="button-row">
+      <a class="cta-button" href="fractals-electron-web-deployment.html">Electron + Web Deployment</a>
+      <a class="cta-button" href="fractals-performance-optimization.html">Performance & Optimization</a>
+      <a class="cta-button" href="fractals-real-time-direction.html">Real-Time Direction</a>
+      <a class="cta-button" href="fractals-rendering-pipeline.html">Rendering Pipeline</a>
+      <a class="cta-button" href="fractals-shader-system.html">Shader System</a>
+    </div>
+  </div>
+</section>
+<footer><p>© 2026 Monulph</p></footer>
+</body>
+</html>
