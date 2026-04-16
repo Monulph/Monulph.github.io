@@ -424,7 +424,54 @@
       </div>
     </div>
 
+    <h4>Fractals Systems &amp; Tools</h4>
+    <p class="section-intro">
+      Fractals is built as a real-time procedural visual system inspired by MilkDrop.
+      The project focuses on modular shaders, scalable scene architecture, and
+      high-performance rendering across web and desktop platforms.
+    </p>
+
+    <div class="mini-grid">
+      <div class="mini-card">
+        <h4>Rendering Pipeline</h4>
+        <p>Real-time WebGL rendering and frame orchestration.</p>
+        <a class="cta-button" href="fractals_rendering_pipeline.html">Open Page</a>
+      </div>
+
+      <div class="mini-card">
+        <h4>Shader System</h4>
+        <p>Modular GLSL-based visual generation.</p>
+        <a class="cta-button" href="fractals_shader_system.html">Open Page</a>
+      </div>
+
+      <div class="mini-card">
+        <h4>Scene &amp; Families</h4>
+        <p>Procedural scene design and visual families.</p>
+        <a class="cta-button" href="fractals-scene-family-architecture.html">Open Page</a>
+      </div>
+
+      <div class="mini-card">
+        <h4>Performance</h4>
+        <p>Load time, stability, and rendering optimization.</p>
+        <a class="cta-button" href="fractals-performance-optimization.html">Open Page</a>
+      </div>
+
+      <div class="mini-card">
+        <h4>Real-Time Direction</h4>
+        <p>Scene control, locking, and transitions.</p>
+        <a class="cta-button" href="fractals-real-time-direction.html">Open Page</a>
+      </div>
+
+      <div class="mini-card">
+        <h4>Deployment</h4>
+        <p>Electron + Web build pipeline.</p>
+        <a class="cta-button" href="fractals-electron-web-deployment.html">Open Page</a>
+      </div>
+    </div>
+  </div>
+    
     <div class="project">
+      <h2>Public Demo</h2>
       <p class="muted">
       Status: Best experienced in fullscreen with System Audio. Some web browsers will not be able to successfully load Fractals. Mobile devices load almost instanstly.
       </p>  
@@ -437,5 +484,149 @@
   <footer>
     <p>© 2026 Monulph</p>
   </footer>
+
+  <script>
+  (function () {
+    function encodePath(path) {
+      return path.split("/").map(encodeURIComponent).join("/");
+    }
+
+    function initImageGallery(galleryId) {
+      const tiles = document.querySelectorAll(`#${galleryId} .shot`);
+
+      tiles.forEach(tile => {
+        const rawPath = tile.getAttribute("data-path");
+        const title = tile.getAttribute("data-title") || rawPath;
+        const src = encodePath(rawPath);
+
+        const link = document.createElement("a");
+        link.href = src;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.title = "Open full-size";
+
+        const img = document.createElement("img");
+        img.className = "thumb";
+        img.alt = title;
+        img.loading = "lazy";
+        img.src = src;
+
+        img.onerror = () => {
+          link.remove();
+          tile.innerHTML = `
+            <div class="missing">
+              <div>
+                <strong>Missing image</strong><br/>
+                Check filename/path:<br/>
+                <code>${src}</code>
+              </div>
+            </div>
+            <div class="cap">
+              <span>${title}</span>
+              <small>not found</small>
+            </div>
+          `;
+        };
+
+        const cap = document.createElement("div");
+        cap.className = "cap";
+        cap.innerHTML = `<span>${title}</span><small>click to open</small>`;
+
+        link.appendChild(img);
+        tile.appendChild(link);
+        tile.appendChild(cap);
+      });
+    }
+
+    function initShaderGallery() {
+      const cards = document.querySelectorAll("#fractals-shader-gallery .shader-card");
+
+      cards.forEach(card => {
+        const title = card.dataset.title || "Shader Preview";
+        const description = card.dataset.description || "";
+        const link = card.dataset.link || "https://www.shadertoy.com/";
+        const previewImage = card.dataset.previewImage || "";
+        const previewVideo = card.dataset.previewVideo || "";
+        const linkLabel = card.dataset.linkLabel || "Open Link";
+
+        const preview = document.createElement("div");
+        preview.className = "shader-preview";
+
+        const badge = document.createElement("div");
+        badge.className = "preview-badge";
+        badge.textContent = previewVideo ? "Local Video" : previewImage ? "Local Image" : "Preview Slot";
+        preview.appendChild(badge);
+
+        if (previewVideo) {
+          const video = document.createElement("video");
+          video.src = encodePath(previewVideo);
+          video.autoplay = true;
+          video.muted = true;
+          video.loop = true;
+          video.playsInline = true;
+          video.preload = "metadata";
+          video.setAttribute("aria-label", `${title} preview video`);
+          preview.appendChild(video);
+
+          video.onerror = () => {
+            preview.appendChild(makeFallback(title, "Preview video not found yet. Add a local mp4 or webm file to bring this tile to life."));
+          };
+        } else if (previewImage) {
+          const img = document.createElement("img");
+          img.src = encodePath(previewImage);
+          img.alt = `${title} preview image`;
+          img.loading = "lazy";
+          preview.appendChild(img);
+
+          img.onerror = () => {
+            img.remove();
+            badge.textContent = "Preview Slot";
+            preview.appendChild(makeFallback(title, "Add a local screenshot here, or swap this tile to a short local loop."));
+          };
+        } else {
+          preview.appendChild(makeFallback(title, "Add a local image or muted loop here. This keeps the portfolio card reliable while linking out to the live shader."));
+        }
+
+        const body = document.createElement("div");
+        body.className = "shader-body";
+
+        const heading = document.createElement("h5");
+        heading.textContent = title;
+
+        const copy = document.createElement("p");
+        copy.textContent = description;
+
+        const actions = document.createElement("div");
+        actions.className = "shader-actions";
+
+        const primary = document.createElement("a");
+        primary.className = "cta-button";
+        primary.href = link;
+        primary.target = "_blank";
+        primary.rel = "noopener noreferrer";
+        primary.textContent = linkLabel;
+
+        actions.appendChild(primary);
+
+        body.appendChild(heading);
+        body.appendChild(copy);
+        body.appendChild(actions);
+
+        card.appendChild(preview);
+        card.appendChild(body);
+      });
+
+      function makeFallback(title, message) {
+        const fallback = document.createElement("div");
+        fallback.className = "preview-fallback";
+        fallback.innerHTML = `<div><strong>${title}</strong><br/>${message}</div>`;
+        return fallback;
+      }
+    }
+
+    initImageGallery("raidbound-gallery");
+    initShaderGallery();
+  })();
+</script>
 </body>
 </html>
