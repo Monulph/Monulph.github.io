@@ -178,6 +178,90 @@
       line-height: 1.5;
     }
 
+
+    .section-intro {
+      color: #cbd5e1;
+      margin: 0 0 14px 0;
+      line-height: 1.55;
+    }
+
+    .shader-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .shader-card {
+      background: rgba(15,23,42,0.6);
+      border: 1px solid rgba(148,163,184,0.15);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: transform 120ms ease, border-color 120ms ease, box-shadow 120ms ease;
+    }
+
+    .shader-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(56,189,248,0.45);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.22);
+    }
+
+    .shader-preview {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(56,189,248,0.28), transparent 32%),
+        radial-gradient(circle at 80% 30%, rgba(99,102,241,0.22), transparent 28%),
+        radial-gradient(circle at 50% 75%, rgba(14,165,233,0.14), transparent 36%),
+        linear-gradient(135deg, rgba(15,23,42,1), rgba(2,6,23,1));
+      border-bottom: 1px solid rgba(148,163,184,0.12);
+    }
+
+    .shader-preview iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+      background: #020617;
+    }
+
+    .shader-preview .preview-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: #e5e7eb;
+      background: rgba(2, 6, 23, 0.75);
+      border: 1px solid rgba(148,163,184,0.18);
+      backdrop-filter: blur(6px);
+      text-transform: uppercase;
+      z-index: 1;
+    }
+
+    .shader-body {
+      padding: 14px;
+    }
+
+    .shader-body h3 {
+      margin: 0 0 8px 0;
+      font-size: 17px;
+      color: #e5e7eb;
+    }
+
+    .shader-body p {
+      margin: 0;
+      color: #cbd5e1;
+      line-height: 1.5;
+      font-size: 14px;
+    }
+
     footer {
       text-align: center;
       padding: 18px;
@@ -282,6 +366,63 @@
       </p>
     </div>
 
+
+    <div class="project">
+      <h2>Fractals Shorts</h2>
+      <p class="section-intro">
+        Short-form captures from my Fractals project, presented here as part of the same portfolio system and visual language as the rest of the page.
+      </p>
+
+      <div class="shader-grid">
+        <article class="shader-card">
+          <div class="shader-preview">
+            <div class="preview-badge">YouTube Short</div>
+            <iframe
+              src="https://www.youtube.com/embed/pOQgti-RRlM"
+              title="Fractals Short 1"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="shader-body">
+            <h3>Fractals Short 01</h3>
+            <p>A preview highlighting the project’s evolving presentation as a live visualizer.</p>
+          </div>
+        </article>
+
+        <article class="shader-card">
+          <div class="shader-preview">
+            <div class="preview-badge">YouTube Short</div>
+            <iframe
+              src="https://www.youtube.com/embed/Y3YwPJOvkxo"
+              title="Fractals Short 2"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="shader-body">
+            <h3>Fractals Short 02</h3>
+            <p>Another captured pass showing the project’s procedural motion, color energy, and rhythm.</p>
+          </div>
+        </article>
+
+        <article class="shader-card">
+          <div class="shader-preview">
+            <div class="preview-badge">YouTube Short</div>
+            <iframe
+              src="https://www.youtube.com/embed/F9CKAN-AwZg"
+              title="Fractals Short 3"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="shader-body">
+            <h3>Fractals Short 03</h3>
+            <p>A quick look at the live visual language and motion design direction behind Fractals.</p>
+          </div>
+        </article>
+      </div>
+    </div>
 
     <div class="project">
       <p class="muted">
