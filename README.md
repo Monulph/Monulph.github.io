@@ -1,14 +1,9 @@
-My background:
-I’ve been working in the gaming industry for 8 years in Customer Service and as an Associate Producer.
-After gaining professional experience, I began working on solo game development projects in my free time. In 2026, I committed fully to building my passion project, Raidbound.
+I’ve been doing a hard scope review on Raidbound.
 
-Why I’m building:
-I love the process of creating something from the ground up and watching the systems grow into a complete experience.
-For me, development is about constant improvement. I find a lot of fulfilment turning ideas into something playable and meaningful.
+The project taught me a lot: Godot combat systems, ATB design, roguelite flow, UI polish, patch tooling, VFX direction, and what it really takes to build a game solo.
 
-What is raidbound:
-Raidbound is a what I call a Raid Command Roguelite, focused on strategic party management and tactical combat. It blends multiple genres featuring: A threat-based ATB combat system, deep itemization and build variety, complex procedural-style map progression, and synergistic party and ability design. Through continuous testing and iteration, the project currently includes: 18,000+ lines of code, 14 playable hero types, 50+ abilities, 55 unique items. 21 unique enemies, 4 enemy factions, and 2 mechanic-focused boss encounters.
+Rather than forcing Raidbound to grow beyond what I can finish at the quality bar I want, I’m moving the world and production lessons into a smaller, sharper project I can actually ship.
 
-My goal: My primary goal is to polish Raidbound into a fun, replayable experience that I’m proud of. Once the first two acts are fully realized and engaging, I’ll consider that a major personal milestone. Long-term, I aim to release Raidbound on Steam so others can experience and enjoy the game.
+Raidbound is not disappearing. It remains a vertical slice, systems foundation, and part of the world I’m building.
 
-What I’m working on now in no particular order: UI and UX polish across Acts 1 and 2, improving readability and GUI design, fixing bugs introduced during iteration, refining core systems based on playtesting, and adding audio to the game. Each update brings the project closer to a complete, professional-quality experience.
+The next project will be leaner, more focused, and built around the same lessons: strong feel, readable systems, dark atmosphere, and a scope that respects solo development.
