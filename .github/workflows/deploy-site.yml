@@ -1,0 +1,83 @@
+name: Deploy website and Raidbound
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v6
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Prepare existing website
+        run: |
+          mkdir -p _site
+          rsync -a \
+            --exclude='.git/' \
+            --exclude='.github/' \
+            --exclude='_site/' \
+            --exclude='raidbound-demo/' \
+            ./ _site/
+
+      - name: Download and verify Raidbound
+        env:
+          GAME_URL: https://github.com/Monulph/Monulph.github.io/releases/download/Raidbound/raidbound-web.zip.zip
+          GAME_SHA256: d2a3e89f53f15d56ac480f654297dc3e2e212382e70ef364d989a6d7d9278961
+        run: |
+          curl --fail --location --retry 3 \
+            "$GAME_URL" -o "$RUNNER_TEMP/raidbound-web.zip"
+          echo "$GAME_SHA256  $RUNNER_TEMP/raidbound-web.zip" \
+            | sha256sum --check
+          mkdir -p _site/raidbound-demo
+          unzip -q "$RUNNER_TEMP/raidbound-web.zip" \
+            -d _site/raidbound-demo
+
+      - name: Check published files and total size
+        run: |
+          for file in \
+            index.html \
+            raidbound-demo/Raidbound.html \
+            raidbound-demo/Raidbound.js \
+            raidbound-demo/Raidbound.pck \
+            raidbound-demo/Raidbound.wasm
+          do
+            if [ ! -s "_site/$file" ]; then
+              echo "::error::Missing or empty file: $file. Check ZIP folder structure and capitalization."
+              exit 1
+            fi
+          done
+
+          size=$(du -sb _site | cut -f1)
+          echo "Total website size: $size bytes"
+          if [ "$size" -ge 1000000000 ]; then
+            echo "::error::Combined website must be below 1 GB."
+            exit 1
+          fi
+
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+      - name: Publish website
+        id: deployment
+        uses: actions/deploy-pages@v4
