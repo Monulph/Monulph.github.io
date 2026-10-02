@@ -41,7 +41,7 @@ jobs:
       - name: Download and verify Raidbound
         env:
           GAME_URL: https://github.com/Monulph/Monulph.github.io/releases/download/Raidbound/raidbound-web-v2.zip.zip
-          GAME_SHA256: d140e46a437e133eaed0f1c9591d47e6fb62f28eb05ef460195c78cf66e83f5c
+          GAME_SHA256: d1498e6a437e133eaed0f1c9591d47e6fb62f28eb05ef460195c78cf66e83f5c
         run: |
           curl --fail --location --retry 3 \
             "$GAME_URL" -o "$RUNNER_TEMP/raidbound-web.zip"
